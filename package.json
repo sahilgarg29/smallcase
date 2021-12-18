@@ -1,0 +1,15 @@
+{
+  "name": "smallcase",
+  "version": "1.0.0",
+  "description": "Smallcase Clone - Unit 3 Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "sahil",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
