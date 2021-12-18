@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./freq.css">
+    <link rel="stylesheet" href="./invester_saying.css">
+    <link rel="stylesheet" href="./everything_you_need.css">
+    <link rel="stylesheet" href="./curate_by_india.css">
+    <style>
+        #seen{
+            height: fit-content;
+            height: 400px;
+            height: 800px;
+            width: 80%;
+            margin: auto;
+            /* border: 1px solid red; */
+        }
+        #seen_div1{
+            display: flex;
+            height: 20%;
+            width: 100%;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            gap: 2%;
+        }
+        /* img{
+           
+        } */
+        .seen_div1_img1234,.seen_div1_img5,.seen_div1_img6{
+            margin-top:20px;
+            /* border: 1px solid black; */
+            width: 16%;
+            height: 25%;
+        }
+        .seen_div1_img5,.seen_div1_img6{
+            width: 12%;
+            margin-top: 30px;
+        }
+        .seen_div1_img5,.seen_div1_img6{
+            height: 40%;
+        }
+        #seen_div2{
+            height: 70%;
+            /* border: 1px solid green; */
+            background-image: url(https://www.smallcase.com/static/images/svg/finance-bg.svg);
+            background-color: rgb(101, 101, 189)
+        }
+        #seen_div2_div{
+            height: 90%;
+            width: 50%;
+            margin: auto;
+            /* border: 1px solid red; */
+        }
+        #seen_div3{
+            height:fit-content;
+            width: 100%;
+            /* border: 5px solid green; */
+            display: grid;
+            grid-template-columns: repeat(3,32%);
+            grid-template-rows: repeat(2,80px);
+            gap: 2%;
+            margin-bottom: 50px;
+        }
+        #seen_div3>div>img{
+            /* border: 1px solid red; */
+            height: 80%;
+            width: 80%;
+            border-radius: 5px;
+            margin:5%;
+        }
+        #seen_div3>div{
+            /* border: 1px solid red; */
+            background-color: white;
+        }
+        @media only screen and (max-width: 1200px){
+            
+            #seen_div1{
+                display: grid;
+                grid-template-columns: repeat(4,20%);
+                grid-template-rows: repeat(2,40%);
+                /* border: 1px solid red; */
+            }
+            .seen_div1_img1234,.seen_div1_img5,.seen_div1_img6{
+                margin-top:10px;
+                /* border: 1px solid red; */
+                width: 90%;
+                height: 90%;
+            }
+            #seen_div2_div{
+                background-color: rgb(99, 99, 182);
+                width: 70%;
+                height: fit-content;
+            }
+            #seen_div3{
+                margin-left: 10px;
+                grid-template-rows: repeat(2,50px);
+                grid-template-columns: repeat(3,30%);
+                /* border: 1px solid red; */
+                gap: 10px;
+            }
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="curate_by_india_div"></div>
+    <div id="everything_you_need_div"></div>
+    <div id="inverter_staying_div"></div>
+    <div id="seen_div"></div>
+    <div id="freq"></div>
+    <div id="footer"></div>
+    <h1>Seen</h1>
+</body>
+</html>
+<script type="module">
+    import footer from './footer.js'
+    document.getElementById("footer").innerHTML=footer()
+    import freq from "./freq.js"
+    document.getElementById("freq").innerHTML=freq()
+    //freq page js
+    import inverterSaying from './invester_saying.js'
+    document.getElementById("inverter_staying_div").innerHTML=inverterSaying()
+    import everythingYouNeed from './Everything_you_need.js'
+    document.getElementById("everything_you_need_div").innerHTML=everythingYouNeed()
+
+    import curateByIndia from './curate_by_india.js'
+    document.getElementById("curate_by_india_div").innerHTML=curateByIndia()
+    import seen from './seen.js'
+    document.getElementById("seen_div").innerHTML=seen()
+    let query_click=0
+    document.getElementById("query_click").addEventListener("click",function(){
+     
+        //let height=document.getElementById("freq_div_div").style.height="fit-content"+"100px"
+        if(query_click){
+            document.getElementById("ans_query").style.display="none"
+          //  document.getElementById("freq_div_div").style.height='fit-content'
+            query_click--
+        }else{
+           // console.log(height)
+           // document.getElementById("freq_div_div").style.height=height
+           let down_arrow=document.getElementById("down_arrow")
+           //down_arrow.innerHTML=
+            //document.getElementById("freq_div_div").style.border="2px solid green"
+            document.getElementById("ans_query").style.display="block"
+            query_click++
+        }
+        console.log("Clicked")
+        
+    })
+    document.getElementById("p2").addEventListener("click",function(){
+        console.log("clicked to p2")
+        document.getElementById("p2").style.display="none"
+        document.getElementById("p1").style.display="block"
+        document.getElementById('loop_video').src="https://assets.smallcase.com/smallcase/assets/videos/track_new.mp4"
+    })
+    document.getElementById("p1").addEventListener("click",function(){
+        console.log("clicked to p1")
+        document.getElementById("p1").style.display="none"
+        document.getElementById("p2").style.display="block"
+        document.getElementById('loop_video').src="https://assets.smallcase.com/smallcase/assets/videos/invest_new.mp4"
+    })
+
+    setTimeout(() => {
+        document.getElementById("p1").style.display="none"
+        document.getElementById("p2").style.display="block"
+        document.getElementById('loop_video').src="https://assets.smallcase.com/smallcase/assets/videos/track_new.mp4"
+    }, 5000);
+    document.getElementById("p2").style.display="none"
+        document.getElementById("p1").style.display="block"
+        document.getElementById('loop_video').src="https://assets.smallcase.com/smallcase/assets/videos/track_new.mp4"
+    //
+</script>

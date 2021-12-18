@@ -1,0 +1,59 @@
+#inv_saying{
+    /* width: 100%; */
+    height: 700px;
+    width: 100%;
+    /* border: 3px solid red; */
+}
+#saying{
+    margin-top: 30px;
+    height: 85%;
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(6,18%);
+    grid-template-rows: repeat(2,48%);
+    /* border: 1px solid green; */
+    gap: 3%;
+    overflow: scroll;
+    overflow: initial;
+    overflow-y: hidden;
+}
+#saying>div{
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1pt solid rgb(226, 226, 226);
+    height: fit-content;
+    border-radius: 10px;
+    /* background-color: rgb(243, 243, 243); */
+    
+}
+.Wid_fit_marg_aut{
+    width: fit-content;
+    margin: auto;
+}
+.twitter_logo_saying_div{
+    height: 50%;
+    width: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* border: 1px solid red; */
+}
+.saying_div_div1{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+}
+.saying_div_div1_div_img{
+    height: 80%;
+    width: 20%;
+    border-radius: 50%;
+    margin: auto none;
+    border: 1px solid black;
+}
+@media only screen and (max-width: 1000px) {
+    #saying{
+        grid-template-columns: repeat(6,35%);
+    }
+
+}
