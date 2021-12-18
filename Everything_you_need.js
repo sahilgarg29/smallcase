@@ -36,7 +36,7 @@ function everythingYouNeed(){
         
         </div>
     </div>
-    <iframe id="loop_video" src="https://assets.smallcase.com/smallcase/assets/videos/invest_new.mp4" frameborder="0"></iframe>
+    // <iframe id="loop_video" src="https://assets.smallcase.com/smallcase/assets/videos/invest_new.mp4" frameborder="0"></iframe>
 </div>
     `
 }

@@ -2,6 +2,7 @@
     height: 500px;
     /* height: fit-content; */
     width: 100%;
+    margin-bottom: 50px;
     /* border: 3px solid green; */
 }
 #mid_box{
@@ -39,6 +40,7 @@ height:80%;
 }
 #mid_box>iframe{
 height: 55%;
+
 /* border: 2px solid black; */
 width: 100%;
 gap:none;
