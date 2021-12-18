@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="./components/windmill.css" />
+    <title>windmill</title>
+  </head>
+  <style>
+
+  </style>
+  <body>
+    <img
+    id="logo"
+    alt=""
+    src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjQuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHdpZHRoPSIxMTlweCIgaGVpZ2h0PSIzMnB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTkyMCA1NTkuMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTkyMCA1NTkuMTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDt9Cgkuc3Qxe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6IzQxMjQ2RTt9Cgkuc3Qye2ZpbGw6IzQxMjQ2RTt9Cgkuc3Qze2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6I0ZGRkZGRjt9Cgkuc3Q0e2ZpbGw6I0ZGRkZGRjt9Cgkuc3Q1e2Rpc3BsYXk6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOm5vbmU7c3Ryb2tlOiMyQTRCOUE7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMjc1LjgsMTE4LjF2NTIuNEgxMTg3djE0OS43YzAsMzEuOCwxOC41LDQ3LjcsNDkuMiw0Ny43YzE2LjYtMC4zLDMzLTIuNyw0OC45LTcuMmw4LjEsNTMKCQljLTE1LjEsNS45LTQxLjcsMTAtNjUuOSwxMGMtNjMsMC0xMDIuNi0zNS4yLTEwMi42LTk2VjE3MC41aC01My42di01Mi40aDU0LjZ2LTk2aDYwLjV2OTZIMTI3NS44eiIvPgoJPHBhdGggY2xhc3M9InN0MSIgZD0iTTkzNC44LDIzNi45Yy0zOC03LjgtNTIuMS0xNy4yLTUyLjEtMzUuOWMwLTIyLjEsMjIuNi0zNC45LDY4LjEtMzQuOWMzMS4zLDAsNjcuMiw2LjksOTEuNiwxNy41bDYuNi01My42CgkJYy0yNS4xLTEwLjktNjQuMy0xOC4xLTEwMS4zLTE4LjFjLTc1LjMsMC0xMjUuNSwzNy40LTEyNS41LDg4LjJjMCw0Ni4yLDI4LjIsNzYuMyw4MS4yLDg3bDQ0LjUsOWMzOC45LDcuOCw1NS4yLDE4LjcsNTUuMiwzOQoJCWMwLDIzLjEtMjEuMSwzNC4zLTY2LjIsMzQuM2MtMzUuNC0wLjQtNzAuNC03LjgtMTAzLTIxLjZsLTcuNSw1My40YzI2LDE0LDY4LjcsMjIuNCwxMTQuNSwyMi40YzczLjEsMCwxMjIuNi0yOSwxMjIuNi04OS41CgkJYzAtNTIuMS0zMi42LTc3LjYtOTMuOC05MC4xTDkzNC44LDIzNi45eiIvPgoJPHBhdGggY2xhc3M9InN0MSIgZD0iTTE0NDQuMiwxMTEuOWMtOTEuNiwwLTE2MCw2OC4zLTE2MCwxNTUuOWgwLjFjMCw4Ny42LDY4LjQsMTU1LjksMTYwLDE1NS45YzkxLjYsMCwxNTkuOS02OC4zLDE1OS45LTE1NS45CgkJQzE2MDQuMiwxODAuMiwxNTM1LjgsMTExLjksMTQ0NC4yLDExMS45eiBNMTQ0NC4zLDM2NS43Yy01Ni44LDAtOTgtNDIuNy05OC05Ny45aDAuMWMwLTU1LjIsNDEuMS05Ny45LDk3LjktOTcuOQoJCWM1Ni44LDAsOTcuOSw0Mi43LDk3LjksOTcuOUMxNTQyLjIsMzIyLjksMTUwMS4xLDM2NS43LDE0NDQuMywzNjUuN3oiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDEiIHBvaW50cz0iMTY1NS44LDExOC4xIDE3MzMuOCwyMjMuNSAxODExLjksMTE4LjEgMTg4My40LDExOC4xIDE3NzIuNCwyNjQuNiAxODg1LjksNDE3LjQgMTgxNC41LDQxNy40IAoJCTE3MzMuOCwzMDUuNSAxNjUzLjIsNDE3LjQgMTU4MS43LDQxNy40IDE2OTUuMiwyNjQuNiAxNTg0LjIsMTE4LjEgCSIvPgoJPHBhdGggY2xhc3M9InN0MiIgZD0iTTY1OC41LDExMS45Yy01MS4xLDAtODUsMTguNy0xMDcuMyw0Ny4xdi00MC44aC02Mi4xdjQyNGg2Mi4xVjM3Ni42YzIyLjMsMjguNCw1Ni4yLDQ3LjEsMTA3LjMsNDcuMQoJCWM4NS42LDAsMTUxLjItNjIuMywxNTEuMi0xNTQuM1M3NDQuMSwxMTEuOSw2NTguNSwxMTEuOXogTTY1MSwzNjguMmMtNTcuNywwLTk5LjQtNDMuNi05OS40LTk4LjhjMC01NS4yLDQxLjQtMTAxLjksOTkuNC0xMDIKCQljMCwwLDAsMCwwLDBoMC4xYzAsMCwwLDAsMCwwYzU4LDAsOTYuNiw0Ni44LDk2LjYsMTAyQzc0Ny42LDMyNC41LDcwOSwzNjguMiw2NTEsMzY4LjJ6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTY5LjgsMjc4LjVjOS4xLTYuNCwxNy43LTEzLjYsMjUuNi0yMS41YzE0LjgtMTQuNywyNy4xLTMxLjYsMzYuNS01MC4xdjc5LjhjMCw0OS42LDI3LjMsNzguMiw3My40LDc4LjIKCQljNDcuNCwwLDg0LjctMjguNiw4NC43LTc4LjJWMTE4LjFINDUydjI5OS4zaC02Mi40di0zNy43Yy0xMCwxNS4zLTM4LjYsNDMuOS05NC4xLDQzLjljLTgyLjIsMC0xMjUuOC01MS4xLTEyNS44LTEyMy44CgkJTDE2OS44LDI3OC41eiIvPgoJPHBhdGggY2xhc3M9InN0MiIgZD0iTTM0LjEsMjUyLjh2NjBjNTIuMywwLDEwMi41LTIwLjUsMTM5LjgtNTcuMWMxOC4zLTE4LDMyLjktMzkuNCw0Mi44LTYzYzEwLTIzLjYsMTUuMS00OC45LDE1LjEtNzQuNWgtNjAuOQoJCWMwLDE3LjctMy42LDM1LjItMTAuNSw1MS42Yy02LjksMTYuMy0xNywzMS4xLTI5LjYsNDMuNkMxMDUsMjM4LjUsNzAuMywyNTIuNywzNC4xLDI1Mi44TDM0LjEsMjUyLjh6Ii8+CjwvZz4KPC9zdmc+Cg=="
+  />
+  <a href="" class="navtext">Dashboard</a>
+  <a href="" class="navtext">Discover</a>
+  <a href="creative.html" class="navtext">Create</a>
+  <a href="watchlist.html" class="navtext" id="separation">Watchlist</a>
+  <a href="" class="navtext">Investments</a>
+  <a href="" class="navbut"><i class="fa fa-bell" style="font-size:20px;color:rgb(161, 159, 159)"></i></a>
+  <a href="" class="navbut" id="navq"><i class="fa fa-question-circle" style="font-size:24px;color:rgb(151, 148, 148)"></i></a>
+
+  <a id="user" href="" class="navbut"
+    >sahil <i class="fa fa-angle-down" style="font-size:24px;color:rgb(133, 130, 130)"></i></i
+  ></a>
+  <hr />
+      <div id="top">
+          <div id="leftBox">  
+              <h3>Windmill Capital</h3>   
+              <p id="we1">SEBI Registration No: INH200007645</p>
+              <p id="we">We’re SEBI registered research analyst creating Thematic & Quantamental model portfolios since 2016. Data analysis is…</p>   
+              <div id="optionsS">
+                  <div class="Fundamental2">Fundamental</div>
+                  <div class="Fundamental">Sector Tracker</div>
+                  <div class="Fundamental1"><u >+12 more strategies</u> </div>
+                </div>    
+          </div>
+          <div id="rightBox">
+            <img id="windmill" src="https://assets.smallcase.com/images/publishers/smallcaseHQ/logo.png" alt="">
+          </div>
+      </div>
+      <div id="top2">
+          <h3>Managed by</h3>
+          <div id="top21">
+              <div id="windmilllogo">
+                  <img id="windmillImg" src="https://assets.smallcase.com/images/publishers/smallcaseHQ/publisher-intro.png" alt="">
+              </div>
+              <div id="capital">
+                <p style="font-weight: bold;margin: 12%;">Windmill Capital </p>
+                <p  style="margin: 12%;"> 5+ years experience</p>
+              </div>
+              <div id="top22">We build investment products and model portfolios to help our users achieve their financial goals.  Our aim is to be the one-stop-shop for all investing needs for a retail investor. Over 50 portfolios - from high-risk, pure-equity strategies to low-risk, asset allocation models, are currently managed by us. We use data, fundamental analysis and mathematical models while assessing sectors, companies, and various asset classes. This makes our approach cautious, yet ambitious! While data and algos help drive our decisions, our analysts step in when the machines fail.</div>
+              <div id="top23">
+                  <h3 style="color: black;">Subscribe to Windmill Capital</h3>
+                  <p>Get access to constituents & rebalance updates for All Weather Investing along with 9 other smallcases with a single subscription.</p>
+                  <p>Pick a plan to continue</p>
+                  <input type="text" class="inp" placeholder="₹ 2,000 for 3 months">
+                  <input type="text" class="inp" placeholder="₹ 6,000 for 1 year">
+                  <br>
+                  <button id="Subscribe">Subscribe Now</button>
+              </div>
+          </div>
+         
+      </div>
+      <!-- top2 -->
+    <div id="main_container">
+        <div id="a">
+          <h3>Popular smallcases by Windmill Capital</h3>
+          <hr />
+          <div id="leftTop">
+            <!-- leftTop -->
+            <div id="insights">
+              <div id="logotext">
+                <div>
+                  <img
+                    id="img1_1"
+                    src="https://assets.smallcase.com/images/smallcases/200/SCAW_0001.png"
+                    alt=""
+                  />
+                </div>
+                <div id="row1">
+                  <h3 id="lower1">
+                    <a href="/"
+                      >All Weather Investing <br /><span id="lower"
+                        >One investment for all market conditions. Works for everyone</span
+                      ></a
+                    >
+                  </h3>
+                </div>
+              </div>
+              <div id="row2">
+                <h3 id="lower1" style="color: #9c9ea0;font-weight: 400;">
+                  Min. Amount <br /><span id="lower">₹ 3,445</span>
+                </h3> <h3 id="lower1" style="margin-left: 15px;color: #9c9ea0;font-weight: 400;">
+                    3Y CAGR <br /><span id="lower" style="color: green;font-size: 18px;">12.85%</span>
+                  </h3>
+              </div>
+              <div id="btn1"><button id="btn">Low Volatility</button></div>
+            </div>
+            <hr />
+            <div id="insights">
+              <div id="logotext">
+                <div>
+                  <img
+                    id="img1_1"
+                    src="https://assets.smallcase.com/images/smallcases/200/SCET_0005.png"
+                    alt=""
+                  />
+                </div>
+                <div id="row1">
+                  <h3 id="lower1">
+                    <a href="/"
+                      >Equity & Gold <br /><span id="lower"
+                        >Create wealth with equities, stay protected with Gold. The sweet spot</span
+                      ></a
+                    >
+                  </h3>
+                </div>
+              </div>
+              <div id="row2">
+                <h3 id="lower1" style="color: #9c9ea0;font-weight: 400;">
+                  Min. Amount <br /><span id="lower">₹ 270</span>
+                </h3> <h3 id="lower1" style="margin-left: 15px;color: #9c9ea0;font-weight: 400;">
+                    3Y CAGR <br /><span id="lower" style="color: green;font-size: 18px;">18.57%</span>
+                  </h3>
+              </div>
+              <div id="btn1"><button id="btn">Low Volatility</button></div>
+            </div>
+            <hr />
+            <div id="insights">
+              <div id="logotext">
+                <div>
+                  <img
+                    id="img1_1"
+                    src="https://assets.smallcase.com/images/smallcases/200/SCSB_0003.png"
+                    alt=""
+                  />
+                </div>
+                <div id="row1">
+                  <h3 id="lower1">
+                    <a href="/"
+                      >Low Risk-Smart Beta<br /><span id="lower"
+                        >A low volatile portfolio that aims for high returns. Passive investing with a twist</span
+                      ></a
+                    >
+                  </h3>
+                </div>
+              </div>
+              <div id="row2">
+                <h3 id="lower1" style="color: #9c9ea0;font-weight: 400;">
+                  Min. Amount <br /><span id="lower">₹ 64,747</span>
+                </h3> <h3 id="lower1" style="margin-left: 15px;color: #9c9ea0;font-weight: 400;">
+                    3Y CAGR <br /><span id="lower" style="color: green;font-size: 18px;">15.27%</span>
+                  </h3>
+              </div>
+              <div id="btn1"><button id="btn">Low Volatility</button></div>
+            </div>
+            <hr />
+            <div id="insights">
+              <div id="logotext">
+                <div>
+                  <img
+                    id="img1_1"
+                    src="	https://assets.smallcase.com/images/smallcases/200/SCMO_0014.png"
+                    alt=""
+                  />
+                </div>
+                <div id="row1">
+                  <h3 id="lower1">
+                    <a href="/"
+                      >Dividend Aristocrats <br /><span id="lower"
+                        >Companies that have been consistently increasing dividends. Extra goodness</span
+                      ></a
+                    >
+                  </h3>
+                </div>
+              </div>
+              <div id="row2">
+                <h3 id="lower1" style="color: #9c9ea0;font-weight: 400;">
+                  Min. Amount <br /><span id="lower">₹ 41,705</span>
+                </h3> <h3 id="lower1" style="margin-left: 15px;color: #9c9ea0;font-weight: 400;">
+                    6Y CAGR <br /><span id="lower" style="color: green;font-size: 18px;">23.85%</span>
+                  </h3>
+              </div>
+              <div id="btn1"><button id="btn">Med. Volatility</button></div>
+            </div>
+            <hr />
+          </div>
+          <!-- <div id="smallfooter"></div> -->
+          <div id="smallFooter">
+            <div id="upPart">
+              <div class="Fcolor">
+                © Powered by smallcase Technologies Pvt. Ltd. Email us at
+                <span>support@upstox.com</span>
+              </div>
+              <div id="myOptions">
+                <div>Help</div>
+                <div>Disclosures</div>
+                <div>More ^</div>
+              </div>
+            </div>
+            <div id="downPart">
+              <div>
+                <img
+                  id="upstoxLogo"
+                  src="https://lever-client-logos.s3.us-west-2.amazonaws.com/eb7738e7-d908-42f5-97da-61b28e53ce73-1631634736627.png"
+                  alt=""
+                />
+                <p class="Fcolor">NSE & BSE - SEBI Registration No: INZ000185137</p>
+              </div>
+              <div id="sec5000">
+                <img
+                  id="secure"
+                  src="https://assets.smallcase.com/images/brokers/upstox/secure.png"
+                  alt=""
+                />
+                <img src="https://assets.smallcase.com/images/brokers/kite/social-trust.png" alt="">
+              </div>
+            </div>
+          </div>
+
+  </body>
+</html>
+<!-- <script type="module">
+  import { smallFooter, upperPart } from "./components/footerS.js";
+
+  var foot = document.getElementById("smallfooter");
+  var up = document.getElementById("upperP");
+  up.innerHTML = upperPart();
+  foot.innerHTML = smallFooter();
+
+
+</script> -->

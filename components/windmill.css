@@ -1,0 +1,326 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: auto;
+  color: #535b62;
+  overflow-x: hidden;
+  width: 80%;
+  margin: auto;
+}
+#main_container {
+  /* width: 98%; */
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 70% 20%;
+  gap: 60px;
+}
+/* #leftTop {
+    border: 1px solid red;
+  } */
+#rightTop {
+  border: 1px solid #9c9ea0;
+  line-height: 25px;
+  padding: 12px;
+  border-radius: 5px;
+  margin-top: 25%;
+  font-size: 14px;
+}
+#leftBottom {
+  /* border: 1px solid red; */
+  margin-top: 40px;
+}
+#rightBottom {
+  border: 1px solid #9c9ea0;
+  line-height: 25px;
+  margin-top: 30px;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.blue {
+  color: blue;
+}
+#bluebar {
+  width: 100%;
+  color: rgb(212, 93, 93);
+  border-radius: 2px;
+  height: 20px;
+}
+#leftTop div {
+  /* border: 1px solid red; */
+  height: 75px;
+  margin-bottom: 20px;
+}
+#manimg {
+  width: 500px;
+}
+#leftBottom div {
+  display: inline-block;
+}
+#mantext {
+  vertical-align: top;
+}
+#insights {
+  display: grid;
+  grid-template-columns: 45% 35% 15%;
+  /* border: 1px solid red; */
+  gap: 15px;
+}
+#logotext {
+  display: grid;
+  grid-template-columns: 20% 75%;
+  /* border: 1px solid green; */
+}
+#img1_1 {
+  width: 80%;
+  border-radius: 5px;
+}
+#lower {
+  font-size: 14px;
+  color: gray;
+  font-weight: 100;
+}
+#lower1 {
+  margin-top: 3px;
+  color: rgb(61, 59, 59);
+  font-size: 17px;
+  font-weight: 550;
+  line-height: 22px;
+}
+#lower1 a {
+  text-decoration: none;
+  color: rgb(61, 59, 59);
+  font-size: 17px;
+}
+#row1 {
+  padding: 0 4px;
+}
+#row2 {
+  display: flex;
+}
+#btn {
+  background-color: white;
+  color: #1f7ae0;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border-color: #1f7ae0;
+}
+#btn1 button {
+  justify-content: center;
+  justify-items: center;
+  margin-top: 15%;
+}
+/* top */
+#top {
+  /* border: 1px solid red; */
+  height: 190px;
+  background-color: #f9fafb;
+}
+#leftBox {
+  /* border: 1px solid red; */
+  height: 91%;
+  width: 35%;
+  float: left;
+}
+#rightBox {
+  /* border: 1px solid red; */
+  height: 98%;
+  width: 30%;
+  float: right;
+}
+#windmill {
+  width: 65%;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+#optionsS {
+  display: flex;
+  margin-left: 15px;
+}
+.Fundamental {
+  background-color: #f1f2f3;
+  color: rgb(99, 100, 99);
+  font-size: 14px;
+  margin-left: 10px;
+  border-radius: 6px;
+  padding: 3px;
+}
+.Fundamental2 {
+  background-color: #f1f2f3;
+  color: rgb(99, 100, 99);
+  font-size: 14px;
+  margin-left: -10px;
+  border-radius: 6px;
+  padding: 3px;
+}
+.Fundamental1 {
+  color: gray;
+  font-size: 12px;
+  margin-left: 11px;
+  padding: 3px;
+}
+#we {
+  font-size: 14px;
+}
+
+#we1 {
+  font-size: 11px;
+}
+#top2 {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 250px;
+  margin-left: 50px;
+}
+#windmilllogo {
+  /* border: 1px solid red; */
+  height: 180px;
+  width: 10%;
+}
+#capital {
+  /* border: 1px solid red; */
+  height: 180px;
+  width: 20%;
+}
+#top21 {
+  display: flex;
+}
+#windmillImg {
+  width: 100%;
+}
+#top22 {
+  /* border: 1px solid red; */
+  width: 30%;
+  height: 50%;
+  margin-left: 5%;
+  font-size: 14px;
+  line-height: 18px;
+}
+#top23 {
+  /* border: 1px solid red; */
+  width: 28%;
+  height: 500px;
+  margin-left: 5%;
+  font-size: 14px;
+  line-height: 20px;
+}
+.inp {
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-color: rgb(103, 167, 241);
+  box-shadow: none;
+  border-radius: 5px;
+  color: black;
+  width: 230px;
+
+  outline: none;
+}
+#Subscribe {
+  font-size: 18px;
+  background-color: #27bc94;
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px;
+  border-color: #27bc94;
+  box-shadow: none;
+}
+/* small footer */
+#smallFooter {
+  /* border: 1px solid red; */
+  width: 135%;
+  height: 200px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+#upPart {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#downPart {
+  margin-top: 30px;
+  display: flex;
+  /* border: 1px solid green; */
+  justify-content: space-between;
+}
+#upstoxLogo {
+  width: 145px;
+}
+#myOptions {
+  display: flex;
+  width: 25%;
+  /* border: 1px solid green; */
+  float: right;
+  justify-content: space-between;
+}
+#myOptions :hover {
+  color: blue;
+  cursor: pointer;
+}
+#secure {
+  /* border: 1px solid olive; */
+  float: right;
+  margin-right: 20%;
+}
+.Fcolor {
+  color: #81878c;
+}
+#sec5000 {
+  display: flex;
+  width: 80px;
+  height: 50px;
+  margin-right: 18%;
+}
+/* top nav bar  */
+#navbar {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid #999da2;
+  font-size: 14px;
+}
+#logo {
+  margin-top: 10px;
+  height: 30px;
+  margin-left: 1%;
+}
+.navtext {
+  color: #999da2;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-top: 15px;
+}
+#separation {
+  margin-left: 30%;
+}
+.navbut {
+  text-decoration: none;
+  margin-top: 15px;
+  margin-left: 1%;
+  background-color: white;
+  border: none;
+  color: #81878c;
+  font-size: 18px;
+}
+#navq {
+  text-decoration: none;
+
+  /* background-color: gray; */
+  color: white;
+  /* width: 1%; */
+  padding-left: 10px;
+  margin-bottom: 10px;
+  height: 20px;
+
+  /* border-radius: 50%; */
+}
+body {
+  font-family: sans-serif;
+}
