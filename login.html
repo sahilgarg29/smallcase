@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://kit.fontawesome.com/1e9a702aec.js" crossorigin="anonymous"></script>
+    <style>
+        #mainDiv{
+            height: 100vh;
+            width: 50%;
+            margin: auto;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 5px;
+        }
+        #scndDiv {
+            height: 85%;
+            width: 70%;
+            margin: auto;
+            padding: 2%;
+            
+        }
+        p{  
+            text-align: center;
+            font-size: 45px;
+            font-family: sans-serif;
+            margin-bottom: 2px;
+        }
+    
+        .greyTxt{
+            font-size: 18px;
+            color: grey;
+        }
+        .myBtnDiv{
+            margin-top: 5%;
+            height: 10%
+        }
+        .myBtn {
+            width: 90%;
+            height: 100%;
+            background-color:#36559c;
+            font-size: 26px;
+            color: whitesmoke;
+            margin-left: 5%;
+            border-radius:5px;
+            border: none;
+        }
+        #viaMail{
+            display: inline-block;
+            width: 100%;
+            align-content: center;
+            text-align: center;
+        }
+        #firstHr{
+            display: inline-block;
+            width: 30%;
+        }
+        #viaMailID{
+            display: inline-block;
+            width: 25%;
+        }
+        #secondHr{
+            display: inline-block;
+            width: 30%;
+        }
+
+        #input{
+            height: 12%;
+            padding: 2%;
+            margin-left: 2.5%;
+            padding-right: 0%;
+            
+        }
+        .inputTxt{
+            font-size: 14px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .inputBox{
+            width: 93%;
+            height: 65%;
+            margin-top: 1%;
+            font-size: 26px;
+            border-radius: 5px;
+        }
+        .inputBox:focus{
+            outline: none;
+            border-color: #303ab2;
+        }
+        #scndLast{
+            height: 10%;
+            width: 90%;
+            
+            padding: 5%;
+            margin-left: 2.5%;
+            padding-right: 0%;
+            margin-top: 12%;
+            display: inline-block;
+        }
+        #loginTxt{
+            font-size: 16px;
+            display: inline-block;
+            padding-bottom: 5%;
+            
+        }
+        #checkBox{
+            height: 20px;
+            width: 20px;
+            border-radius: 5px;
+            margin-top: 10%;
+            
+        }
+        .resetPass{
+            
+            font-size: 16px;
+           margin-left: 30%;
+            display: inline-block;
+            text-align: right;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="mainDiv">
+        <div id="scndDiv">
+            <div>
+                <p id="firstTxt">Sign In Now</p>
+                <p class="greyTxt">Enjoy the convenience of a single account across all participating brands</p>
+            </div>
+
+            <div class="myBtnDiv">
+                <button class="myBtn"><i class="fab fa-facebook-square"></i>  Sign In With Facebook</button>
+            </div>
+
+            <div id="viaMail">
+                <div id="firstHr"><hr></div>
+                <p class="greyTxt" id="viaMailID">Or via email</p>
+                <hr id="secondHr">
+            </div>
+
+            <div id="input">
+                <p class="inputTxt">Your Username</p>
+                <input type="text" id="emailAddr" class="inputBox">
+                <p class="inputTxt">Your Password</p>
+                <input type="password" id="passWord" class="inputBox">
+            </div>
+
+            <div id="scndLast">
+                <input type="checkbox" name="" id="checkBox"><p id="loginTxt">&nbsp;Keep me logged in</p><p class="resetPass"><a href="resetpwd.html"> Forgot your password? </a> </p>
+            </div>
+
+            <div class="myBtnDiv">
+                <button class="myBtn" id="logIn">Login</button>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById("logIn").addEventListener("click", signIn);
+    var regdUser = JSON.parse(localStorage.getItem("userData"));
+    function signIn(){
+        var email = document.querySelector("#emailAddr").value;
+        var pass = document.querySelector("#passWord").value;
+
+        if(email == 'admin' && pass == 'admin'){
+            window.location.href = "admin.html";
+            alert('Welcome admin!');
+        }else if(email == 'sahil' && pass == '1234') {
+            window.location.href = "creative.html";
+                    alert('login succesful');
+        }
+        else{
+            for (var i = 0; i < regdUser.length; i++){
+                if (regdUser[i].emailAddress == email && regdUser[i].passWord == pass){
+                    window.location.href = "homepage.html";
+                    alert('login succesful');
+                } else{
+                    alert("Check you email & password");
+                }
+            }
+        }
+    }
+</script>
