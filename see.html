@@ -96,4 +96,13 @@
     },1000);
     }
     scrollleft()
+    let a=document.getElementById("saying").children
+    console.log(a.length)
+    for(let i=0;i<a.length;i++){
+        a[i].addEventListener("mouseover",function(){
+            console.log("Hover")
+            clearInterval(scrollinterval)
+        })
+        a[i].addEventListener("mouseout",scrollleft)
+    }
 </script>
