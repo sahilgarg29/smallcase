@@ -1,0 +1,44 @@
+#freq_div{
+    height: 500px;
+    height: fit-content;
+    width: 80%;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+#freq_div_div{
+    width: 100%;
+    /* height: 40%; */
+    height: fit-content;
+    display: flex;
+    /* border: 1px solid red; */
+    gap: 5%;
+}
+#freq_div_div>div{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.right_arrow{
+    color: blue;
+}
+.query,#query_click{
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    /* margin-top: -5px; */
+}
+.query:hover,#query_click:hover{
+    color: blue;
+    cursor: pointer;
+}
+#ans_query{
+    display:none;
+    width: 90%;
+    /* height: 100px; */
+    margin-left: 5%;
+    /* border: 1px solid red; */
+}
+.center_text{
+    text-align: center;
+    
+}

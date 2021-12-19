@@ -1,0 +1,31 @@
+#loop_intro{
+    margin-top: 20px;
+    height: 600px;
+    width: 80%;
+    /* border: 1px solid black; */
+    margin: auto;
+    display: flex;
+}
+#loop_intro>div,#loop_intro>iframe{
+    height: 90%;
+    width: 45%;
+    margin-left: 5%;
+    /* border: 1px solid red; */
+}
+#loop_intro_div_div{
+    margin-top: 20px;
+    height: 70%;
+    /* border: 1px solid greenyellow; */
+}
+#loop_intro_div_div>div{
+    height: 25%;
+    height: fit-content;
+    /* border-bottom: 1px solid red; */
+
+}
+#p1{
+    display: none;
+}
+.loop_intro_div_div1_p{
+    margin-left: 50px;
+}
