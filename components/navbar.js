@@ -1,5 +1,5 @@
-function navbar(){
-    return `<img id="logo"  alt="">  
+function navbar() {
+  return `<img id="logo"  alt="" src="../images/logo.svg">  
             <a href="" class="navtext">Dashboard</a>
             <a href="" class="navtext">Discover</a>
             <a href="creative.html" class="navtext">Create</a>
@@ -9,5 +9,6 @@ function navbar(){
             <a href="" class="navbut" id="navq" >?</a>
        
          
-          <a id="user" href="" class="navbut">sahil<i class="fas fa-angle-down"></i></a>`
-}export default navbar
+          <a id="user" href="" class="navbut">sahil<i class="fas fa-angle-down"></i></a>`;
+}
+export default navbar;
