@@ -29,6 +29,9 @@
 #saying>div:hover{
     transform:scale(1.1);
 }
+#saying::-webkit-scrollbar {
+    display: none;
+}
 .Wid_fit_marg_aut{
     width: fit-content;
     margin: auto;
