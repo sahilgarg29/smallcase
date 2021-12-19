@@ -17,7 +17,7 @@ function smallFooter() {
         <div>
           <img
             id="upstoxLogo"
-            src="https://lever-client-logos.s3.us-west-2.amazonaws.com/eb7738e7-d908-42f5-97da-61b28e53ce73-1631634736627.png"
+            src="../images/logo.svg"
             alt=""
           />
           <p class="Fcolor">NSE & BSE - SEBI Registration No: INZ000185137</p>

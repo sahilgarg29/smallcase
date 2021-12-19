@@ -2,6 +2,7 @@ import collections from "../components/collections.js";
 import allSmallCases from "../components/allSmallcases.js";
 import getData from "./getData.js";
 import managers from "../components/managers.js";
+import navbar from "../components/navbar.js";
 
 import {
   totalfilters,
@@ -213,4 +214,7 @@ function handleFilters(div) {
   });
 }
 
-mainDiv.innerHTML = collections();
+mainDiv.innerHTML = mainDiv.innerHTML = collections();
+
+const navbarDiv = document.getElementById("section-navbar");
+navbarDiv.innerHTML = navbar();
