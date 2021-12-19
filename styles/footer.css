@@ -1,0 +1,44 @@
+
+   #smallFooter {
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 200px;
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  #upPart {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #downPart {
+    margin-top: 30px;
+    display: flex;
+    /* border: 1px solid green; */
+    justify-content: space-between;
+  }
+  #upstoxLogo {
+    width: 145px;
+  }
+  #myOptions {
+    display: flex;
+    width: 20%;
+    /* border: 1px solid green; */
+    float: right;
+    justify-content: space-between;
+  }
+  #myOptions :hover {
+    color: blue;
+    cursor: pointer;
+  }
+  #secure {
+    /* border: 1px solid olive; */
+    float: right;
+    margin-right: 110%;
+  }
+  .Fcolor {
+    color: #81878c;
+  }

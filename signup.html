@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  </title>
+    <style>
+        #signup{
+            height: 50vh;
+            width: 45%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 15px;
+            text-align: left;
+            align-items: left;
+            align-content: left;
+            padding: 2%;
+            padding-left: 5%;
+            margin-top: 7%;
+            
+        }
+        p{  
+            text-align: left;
+            font-family: sans-serif;
+            margin-bottom: 2px;
+            
+        }
+        .mid-text{
+            font-size: 22px;
+            font-family: sans-serif;
+            text-align: left;
+            
+        }
+        .mobile{
+            font-size: 18px;
+            font-family: sans-serif;
+            text-align: left;
+            font-weight: bold;
+        }
+        #number{
+            width: 80%;
+            height: 12%;
+            margin-top: 1%;
+            font-size: 26px;
+        }
+        #number:focus{
+            outline: none;
+            border-color: #303ab2;
+        }
+        #hr{
+            width:80%;
+            border-radius: 15%;
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+        #lastBox{
+            height: 15%;
+            width: 90%;
+            
+            
+            display: inline-block;
+        }
+        .inl{
+            display: inline-block;
+        }
+        #withMail{
+            width: 40%;
+            
+            
+            height: 60%;
+            vertical-align: top;
+        }
+        #btn{
+            width: 220px;
+            background-color: #303ab2;
+            border: none;
+            margin-left: 28%;
+            height: 60px;
+            color: whitesmoke;
+            font-size: 35px;
+            border-radius: 10px;
+            font-family: sans-serif;
+        }
+        .mail{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="signup">
+
+        <p style="font-size: 38px">Sign up or Sign in</p>
+        <p class="mid-text" style="font-size:12px">Enjoy the convenience of a single account across all participating brands</p>
+        <p class="mobile" style="font-size:12px">Mobile Number</p>
+        <input type="tel" id="number" placeholder="+91 | ">
+        <p class="mid-text" id="black" style="font-size: 14px">By creating your account you agree to our <a href="https://www.masaischool.com/terms">Terms and conditions</a></p>
+        <hr id="hr">
+        <div id="lastBox">
+            <div id="withMail" class="inl"><p class="mail" style="font-size: 14px">Login with username? &nbsp;<a href="login.html">Click here</a></p></div>
+            <div id="continueBtn" class="inl">
+                <button id="btn"><a href="otp.html">Continue</a></button>
+            </div>
+        </div>
+    </div>
+    <!-- <h1>Signup</h1>
+    <input type="email" id="email" placeholder="Enter your email id here" class="inputBox">
+    <input type="password" id="pass" placeholder="Enter password here" class="inputBox">
+    <input type="text" id="user" placeholder="Enter your Username" class="inputBox">
+    <input type="number" id="number" placeholder="Enter your mobile number here" class="inputBox">
+    <button>Submit</button>
+    </div> -->
+</body>
+</html>
+
+<script>
+    document.querySelector("#btn").addEventListener("click", signUp);
+    var userArr = JSON.parse(localStorage.getItem("userData")) || [];
+
+    function signUp(){
+      
+        var mobile = document.getElementById("number").value;
+
+        var userCredentials = {
+           
+            mobileNo: mobile,
+        };
+        userArr.push(userCredentials);
+        localStorage.setItem("userData", JSON.stringify(userArr));
+        window.location.href = "sign.html";
+    }
+
+</script>
