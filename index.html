@@ -6,7 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <link rel="stylesheet" href="./freq.css" />
+    <link rel="stylesheet" href="./invester_saying.css" />
+    <link rel="stylesheet" href="./everything_you_need.css" />
+    <link rel="stylesheet" href="./curate_by_india.css" />
+    <link rel="stylesheet" href="./seen.css" />
     <style>
+      @font-face {
+        font-family: Graphik Medium;
+        src: url("/fonts/Graphik-Font-Family/GraphikMedium.otf");
+      }
+
+      @font-face {
+        font-family: Graphik Regular;
+        src: url("/fonts/Graphik-Font-Family/GraphikRegular.otf");
+      }
+
+      body {
+        font-family: "Graphik Regular";
+      }
+
       #container {
         height: 600px;
         width: 99.99%;
@@ -286,10 +306,27 @@
         height: 80px;
         width: 90px;
       }
+
+      .navbar-active {
+        border-bottom-color: black;
+      }
     </style>
   </head>
   <body>
-    <div id="navbar"></div>
+    <div id="navbar">
+      <img id="logo" alt="" src="../images/logo.svg" />
+      <a href="dashboard.html" class="navtext navbar-active">Dashboard</a>
+      <a href="discover.html" class="navtext">Discover</a>
+      <a href="creative.html" class="navtext">Create</a>
+      <a href="watchlist.html" class="navtext" id="separation">Watchlist</a>
+      <a href="investment.html" class="navtext">Investments</a>
+      <a href="" class="navbut"><i class="fas fa-bell"></i></a>
+      <a href="" class="navbut" id="navq">?</a>
+
+      <a id="user" href="signup.html" class="navbut"
+        >Signup<i class="fas fa-angle-down"></i
+      ></a>
+    </div>
     <div id="container">
       <div id="stock">
         <div id="a1">
@@ -485,13 +522,18 @@
         </div>
       </div>
     </div>
+
+    <div id="keshav">
+      <div id="curate_by_india_div"></div>
+      <div id="everything_you_need_div"></div>
+      <div id="inverter_staying_div"></div>
+      <div id="seen_div"></div>
+      <div id="freq"></div>
+      <div id="footer"></div>
+    </div>
   </body>
 </html>
 <script type="module">
-  import navbar from "./components/navbar.js";
-  console.log(navbar);
-  let container = document.getElementById("navbar");
-  container.innerHTML = navbar();
   let id;
   var count = 0;
   id = setInterval(function () {
@@ -537,4 +579,91 @@
   p.style.fontSize = "18px";
   img.src = "https://assets.smallcase.com/images/smallcases/200/SCNM_0007.png";
   div.append(img, p, p1, p2, p3, btn);
+</script>
+<script type="module">
+  import footer from "./footer.js";
+
+  document.getElementById("footer").innerHTML = footer();
+  import freq from "./freq.js";
+  document.getElementById("freq").innerHTML = freq();
+  //freq page js
+  import inverterSaying from "./invester_saying.js";
+  document.getElementById("inverter_staying_div").innerHTML = inverterSaying();
+  import everythingYouNeed from "./Everything_you_need.js";
+  document.getElementById("everything_you_need_div").innerHTML =
+    everythingYouNeed();
+
+  import curateByIndia from "./curate_by_india.js";
+  document.getElementById("curate_by_india_div").innerHTML = curateByIndia();
+  import seen from "./seen.js";
+  document.getElementById("seen_div").innerHTML = seen();
+  let query_click = 0;
+  document.getElementById("query_click").addEventListener("click", function () {
+    //let height=document.getElementById("freq_div_div").style.height="fit-content"+"100px"
+    if (query_click) {
+      document.getElementById("ans_query").style.display = "none";
+      //  document.getElementById("freq_div_div").style.height='fit-content'
+      query_click--;
+    } else {
+      // console.log(height)
+      // document.getElementById("freq_div_div").style.height=height
+      let down_arrow = document.getElementById("down_arrow");
+      //down_arrow.innerHTML=
+      //document.getElementById("freq_div_div").style.border="2px solid green"
+      document.getElementById("ans_query").style.display = "block";
+      query_click++;
+    }
+    console.log("Clicked");
+  });
+  document.getElementById("p2").addEventListener("click", function () {
+    console.log("clicked to p2");
+    document.getElementById("p2").style.display = "none";
+    document.getElementById("p1").style.display = "block";
+    document.getElementById("loop_video").src =
+      "https://assets.smallcase.com/smallcase/assets/videos/track_new.mp4";
+  });
+  document.getElementById("p1").addEventListener("click", function () {
+    console.log("clicked to p1");
+    document.getElementById("p1").style.display = "none";
+    document.getElementById("p2").style.display = "block";
+    document.getElementById("loop_video").src =
+      "https://assets.smallcase.com/smallcase/assets/videos/invest_new.mp4";
+  });
+
+  setTimeout(() => {
+    document.getElementById("p1").style.display = "none";
+    document.getElementById("p2").style.display = "block";
+    document.getElementById("loop_video").src =
+      "https://assets.smallcase.com/smallcase/assets/videos/track_new.mp4";
+  }, 5000);
+  document.getElementById("p2").style.display = "none";
+  document.getElementById("p1").style.display = "block";
+  document.getElementById("loop_video").src =
+    "https://assets.smallcase.com/smallcase/assets/videos/track_new.mp4";
+  //
+
+  var scrollinterval;
+  function scrollleft() {
+    scrollinterval = setInterval(() => {
+      document.getElementById("saying").scrollLeft += 20;
+      //console.log(document.getElementById("saying").scrollLeft)
+      if (document.getElementById("saying").scrollLeft == "340") {
+        console.log("340");
+        clearInterval(scrollinterval);
+        document.getElementById("saying").scrollLeft = 0;
+        console.log("left " + document.getElementById("saying").scrollLeft);
+        scrollleft();
+      }
+    }, 1000);
+  }
+  scrollleft();
+  let a = document.getElementById("saying").children;
+  console.log(a.length);
+  for (let i = 0; i < a.length; i++) {
+    a[i].addEventListener("mouseover", function () {
+      console.log("Hover");
+      clearInterval(scrollinterval);
+    });
+    a[i].addEventListener("mouseout", scrollleft);
+  }
 </script>
