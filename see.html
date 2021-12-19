@@ -80,4 +80,20 @@
         document.getElementById("p1").style.display="block"
         document.getElementById('loop_video').src="https://assets.smallcase.com/smallcase/assets/videos/track_new.mp4"
     //
+
+    var scrollinterval
+    function scrollleft(){
+        scrollinterval=setInterval(() => {
+        document.getElementById('saying').scrollLeft += 20;
+        //console.log(document.getElementById("saying").scrollLeft)
+        if(document.getElementById("saying").scrollLeft=="340"){
+            console.log("340")
+            clearInterval(scrollinterval)
+            document.getElementById("saying").scrollLeft=0
+            console.log("left "+document.getElementById("saying").scrollLeft)
+            scrollleft()
+        }
+    },1000);
+    }
+    scrollleft()
 </script>
