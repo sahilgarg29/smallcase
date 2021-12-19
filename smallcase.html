@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smallcase</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+  </head>
+  <link rel="stylesheet" href="styles/smallcase.css" />
+  <body>
+    <div id="main">
+      <div class="modal-container" style="display: none">
+        <div>
+          <h2>
+            Investing in
+            <span id="modal-smallcase-name"> All Weather Investing </span>
+          </h2>
+
+          <button onclick="closeBox()">X</button>
+        </div>
+        <div>
+          <div>
+            <h2>Confirm Investment Amount</h2>
+            <p>
+              Min. Investment Amount:
+              <span id="modal-min-amount"> ₹ 3,392.33 </span>
+            </p>
+          </div>
+          <div>
+            <div id="monthly-or-one">
+              <span class="selected">Monthly SIP</span><span>One Time</span>
+            </div>
+            <div>
+              <span>₹ </span><input type="number" name="amount" id="amount" />
+            </div>
+            <button class="btn-blue">Confirm Amount</button>
+          </div>
+        </div>
+      </div>
+      <section class="section-header">
+        <div class="container">
+          <img
+            src="https://assets.smallcase.com/images/smallcases/160/SCAW_0001.png"
+            alt=""
+            id="smallcase-thumb"
+          />
+          <div class="header-overview">
+            <div>
+              <h1 id="smallcase-heading-name">All Weather Investing</h1>
+              <span id="smallcase-free-access">Free Access</span>
+            </div>
+            <p id="smallcase-heading-overview">
+              One investment for all market conditions. Works for everyone
+            </p>
+          </div>
+          <div class="returns">
+            <p id="smallcase-returns">3Y CAGR</p>
+            <p id="smallcase-returns-percentage">12.91%</p>
+          </div>
+          <div class="volatility" id="smallcase-vol">Low Volatility</div>
+        </div>
+      </section>
+
+      <section class="section-main">
+        <div class="container">
+          <section class="section-left">
+            <section class="section-smallcase-nav">
+              <div class="container">
+                <nav class="smallcase-nav">
+                  <ul class="left">
+                    <li class="link-active"><a>Overview</a></li>
+                    <li><a>ETFs & Weights</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </section>
+            <div class="section-main-content"></div>
+          </section>
+          <section class="section-sidebar">
+            <div class="section-invest">
+              <div>
+                <p>Minimum Investment Amount</p>
+                <h2 id="smallcase-min-inves-amount">₹ 3,441</h2>
+              </div>
+              <div>
+                <p>Get access for free forever</p>
+                <a href="#">See more benefits</a>
+              </div>
+              <div>
+                <button class="btn-green" id="button-invest-now">
+                  Invest Now
+                </button>
+                <button class="btn-outline">Add to Watchlist</button>
+              </div>
+            </div>
+            <div class="section-callme">
+              <h3>Need help with investing?</h3>
+              <p>Just enter your details below & we'll reach out to you</p>
+              <div class="callme-mobileno">
+                <label for="mobile-no">Your mobile number</label>
+                <input
+                  type="number"
+                  name="mobile-no"
+                  id="mobile-no"
+                  placeholder="Eg: 9876543210"
+                />
+              </div>
+              <div class="callme-timeslots">
+                <label for="preferred-time">Preferred time</label>
+                <div>
+                  <span>10 - 12</span>
+                  <span>12 - 2</span>
+                  <span>2 - 4</span>
+                  <span>4 - 6</span>
+                </div>
+              </div>
+              <a href="#" class="btn-blue" id="callme-btn"
+                >Call Between 10AM - 12PM</a
+              >
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+<script>
+  function closeBox() {
+    const modalcont = document.querySelector(".modal-container");
+    modalcont.setAttribute("style", "display:none");
+  }
+</script>
+<script src="scripts/smallcase.js" type="module"></script>

@@ -1,0 +1,348 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "username": "sahil2907",
+      "watchList": [
+        0,
+        1
+      ],
+      "balance": 10000
+    },
+    {
+      "username": "sahilankusahil",
+      "watchList": [],
+      "balance": 0,
+      "id": "HBIlbhn"
+    },
+    {
+      "username": "sahil49616",
+      "watchList": [],
+      "balance": 0,
+      "id": "uSuI7FV"
+    }
+  ],
+  "smallcases": [
+    {
+      "id": 0,
+      "name": "Top 100 Stocks",
+      "overview": "India's most powerful companies in one portfolio. Solid stability",
+      "image": "https://assets.smallcase.com/images/smallcases/160/SCET_0004.png",
+      "returns": [
+        {
+          "3Y": 19.46
+        }
+      ],
+      "volatility": "Med",
+      "minInvestment": 1201,
+      "etfs": [
+        {
+          "segment": "equity",
+          "stocks": [
+            {
+              "stockId": 0,
+              "weightage": 14.3
+            },
+            {
+              "stockId": 1,
+              "weightage": 12.94
+            }
+          ]
+        }
+      ],
+      "reviewFreq": "quaterly",
+      "lastReview": "Sep 30, 2021",
+      "nextReview": "Dec 30, 2021",
+      "managerId": 0,
+      "subType": "paid"
+    },
+    {
+      "id": 1,
+      "name": "All Weather Investing",
+      "overview": "One investment for all market conditions. Works for everyone",
+      "image": "https://assets.smallcase.com/images/smallcases/160/SCAW_0001.png",
+      "returns": [
+        {
+          "3Y": 12.94
+        }
+      ],
+      "volatility": "Low",
+      "minInvestment": 3448,
+      "etfs": [
+        {
+          "segment": "gold",
+          "stocks": [
+            {
+              "stockId": 2,
+              "weightage": 19.75
+            }
+          ]
+        },
+        {
+          "segment": "equity",
+          "stocks": [
+            {
+              "stockId": 0,
+              "weightage": 14.3
+            },
+            {
+              "stockId": 1,
+              "weightage": 12.94
+            }
+          ]
+        },
+        {
+          "segment": "debt",
+          "stocks": [
+            {
+              "stockId": 3,
+              "weightage": 53
+            }
+          ]
+        }
+      ],
+      "reviewFreq": "quaterly",
+      "lastReview": "Sep 30, 2021",
+      "nextReview": "Dec 30, 2021",
+      "managerId": 0,
+      "subType": "free access"
+    },
+    {
+      "id": 2,
+      "name": "Dividend Aristocrats",
+      "overview": "Companies that have been consistently increasing dividends. Extra goodness",
+      "image": "https://assets.smallcase.com/images/smallcases/160/SCMO_0014.png",
+      "returns": [
+        {
+          "6Y": 24.13
+        }
+      ],
+      "volatility": "Med",
+      "minInvestment": 41340,
+      "etfs": [
+        {
+          "segment": "gold",
+          "stocks": [
+            {
+              "stockId": 2,
+              "weightage": 19.75
+            }
+          ]
+        },
+        {
+          "segment": "equity",
+          "stocks": [
+            {
+              "stockId": 0,
+              "weightage": 14.3
+            },
+            {
+              "stockId": 1,
+              "weightage": 12.94
+            }
+          ]
+        }
+      ],
+      "reviewFreq": "annual",
+      "lastReview": "Sep 15, 2021",
+      "nextReview": "Sep 15, 2022",
+      "managerId": 0,
+      "subType": "free access"
+    },
+    {
+      "id": 3,
+      "name": "Green Energy",
+      "overview": "A portfolio of stocks, which will get benefit from the renewable energy sector development.",
+      "image": "https://assets.smallcase.com/images/smallcases/160/NIVTR_0001.png",
+      "returns": [
+        {
+          "9M": 123.67
+        }
+      ],
+      "volatility": "High",
+      "minInvestment": 58106,
+      "etfs": [
+        {
+          "segment": "gold",
+          "stocks": [
+            {
+              "stockId": 2,
+              "weightage": 19.75
+            }
+          ]
+        },
+        {
+          "segment": "equity",
+          "stocks": [
+            {
+              "stockId": 0,
+              "weightage": 14.3
+            },
+            {
+              "stockId": 1,
+              "weightage": 12.94
+            }
+          ]
+        }
+      ],
+      "reviewFreq": "annual",
+      "lastReview": "Sep 15, 2021",
+      "nextReview": "Sep 15, 2022",
+      "managerId": 1,
+      "subType": "free access"
+    },
+    {
+      "id": 4,
+      "name": "Auto Tracker",
+      "overview": "Companies to efficiently track and invest in the auto sector",
+      "image": "https://assets.smallcase.com/images/smallcases/160/SCTR_0001.png",
+      "returns": [
+        {
+          "6Y": 8.87
+        }
+      ],
+      "volatility": "Med",
+      "minInvestment": 33163,
+      "etfs": [
+        {
+          "segment": "gold",
+          "stocks": [
+            {
+              "stockId": 2,
+              "weightage": 19.75
+            }
+          ]
+        },
+        {
+          "segment": "equity",
+          "stocks": [
+            {
+              "stockId": 0,
+              "weightage": 14.3
+            },
+            {
+              "stockId": 1,
+              "weightage": 12.94
+            }
+          ]
+        }
+      ],
+      "reviewFreq": "quaterly",
+      "lastReview": "Sep 15, 2021",
+      "nextReview": "Dec 16, 2021",
+      "managerId": 0,
+      "subType": "free access"
+    },
+    {
+      "id": 5,
+      "name": "Equity & Gold      ",
+      "overview": "Create wealth with equities, stay protected with Gold. The sweet spot",
+      "image": "https://assets.smallcase.com/images/smallcases/160/SCET_0005.png",
+      "returns": [
+        {
+          "3Y": 18.95
+        }
+      ],
+      "volatility": "Low",
+      "minInvestment": 271,
+      "etfs": [
+        {
+          "segment": "gold",
+          "stocks": [
+            {
+              "stockId": 2,
+              "weightage": 19.75
+            }
+          ]
+        },
+        {
+          "segment": "equity",
+          "stocks": [
+            {
+              "stockId": 0,
+              "weightage": 14.3
+            },
+            {
+              "stockId": 1,
+              "weightage": 12.94
+            }
+          ]
+        }
+      ],
+      "reviewFreq": "quaterly",
+      "lastReview": "Sep 30, 2021",
+      "nextReview": "Dec 30, 2021",
+      "managerId": 0,
+      "subType": "free access"
+    }
+  ],
+  "managers": [
+    {
+      "id": 0,
+      "name": "Windmill Capital",
+      "image": "https://assets.smallcase.com/images/publishers/smallcaseHQ/logo.png",
+      "overview": "We’re SEBI registered research analyst creating Thematic & Quantamental model portfolios since 2016. Data analysis is…",
+      "categories": [
+        "Fundamental",
+        "Sector Tracker"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Niveshaay",
+      "image": "https://assets.smallcase.com/images/publishers/niveshaay/logo.png",
+      "categories": [
+        "Fundamental",
+        "Sector Tracker"
+      ],
+      "overview": "Niveshaay is a SEBI Registered Investment Advisory Firm with a Dedicated Research Team specializing in unearthing high…",
+      "manage-by": {
+        "name": "Arvind Kothari",
+        "expirence": "10+",
+        "about": "Arvind is the Founder and Director of Niveshaay. Has been practicing Equity Research and Investment Advisory for the last 10 years and has given shape to one its kind company that provides complete investment planning solutions. He has a vision that Indians should invest at least 10% of their savings in the Capital Markets which is currently only 2%. After 2 years stint at ICICI Bank as an Industry Research Analyst, he has been successfully running Niveshaay Investment Advisors, which is a SEBI Registered Investment Advisory Firm. Being a Chartered Accountant (CA) and Chartered Financial Analyst (CFA) himself, he has an inherent passion for Economics and been conducting sessions at various prestigious institutes in Surat, Mumbai, and Pune."
+      }
+    }
+  ],
+  "stocks": [
+    {
+      "id": 0,
+      "name": "Nippon India Junior Bees ETF",
+      "price": 448.92
+    },
+    {
+      "id": 1,
+      "name": "Nippon India Nifty 50 Bees ETF",
+      "price": 187.9
+    },
+    {
+      "id": 2,
+      "name": "Nippon India Gold Bees ETF",
+      "price": 41.55
+    },
+    {
+      "id": 3,
+      "name": "Nippon India Liquid Bees ETF",
+      "price": 999.99
+    },
+    {
+      "id": 4,
+      "name": "Nippon India Junior Bees ETF",
+      "price": 448.92
+    },
+    {
+      "id": 5,
+      "name": "Nippon India Junior Bees ETF",
+      "price": 448.92
+    },
+    {
+      "id": 6,
+      "name": "Nippon India Junior Bees ETF",
+      "price": 448.92
+    },
+    {
+      "id": 7,
+      "name": "Nippon India Junior Bees ETF",
+      "price": 448.92
+    }
+  ]
+}
