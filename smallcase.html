@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smallcase</title>
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="components/footer.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
   </head>
   <link rel="stylesheet" href="styles/smallcase.css" />
   <body>
+    <section id="section-navbar"></section>
     <div id="main">
       <div class="modal-container" style="display: none">
         <div>
@@ -32,9 +35,12 @@
               <span class="selected">Monthly SIP</span><span>One Time</span>
             </div>
             <div>
-              <span>₹ </span><input type="number" name="amount" id="amount" />
+              <span>₹ </span
+              ><input type="number" name="amount" id="amount" required />
             </div>
-            <button class="btn-blue">Confirm Amount</button>
+            <button class="btn-blue" onclick="handleInvest()">
+              Confirm Amount
+            </button>
           </div>
         </div>
       </div>
@@ -122,6 +128,7 @@
           </section>
         </div>
       </section>
+      <footer></footer>
     </div>
   </body>
 </html>
@@ -129,6 +136,14 @@
   function closeBox() {
     const modalcont = document.querySelector(".modal-container");
     modalcont.setAttribute("style", "display:none");
+  }
+
+  function handleInvest() {
+    let oneOrSip = document.querySelector(".selected").textContent;
+    let amount = document.getElementById("amount").value;
+
+    console.log(oneOrSip, amount);
+    closeBox();
   }
 </script>
 <script src="scripts/smallcase.js" type="module"></script>

@@ -1,6 +1,8 @@
 import getData from "./getData.js";
 import smallcaseOverview from "../components/smallcaseOverview.js";
 import smallcaseETFs from "../components/smallcaseETFs.js";
+import navbar from "../components/navbar.js";
+import { smallFooter, upperPart } from "../components/footerS.js";
 
 let url = new URL(window.location.href);
 
@@ -197,3 +199,9 @@ MorOBtn.forEach((e) => {
     e.className = "selected";
   });
 });
+
+const navbarDiv = document.getElementById("section-navbar");
+navbarDiv.innerHTML = navbar();
+
+const footerDiv = document.querySelector("footer");
+footerDiv.innerHTML = smallFooter();

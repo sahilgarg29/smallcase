@@ -3,6 +3,7 @@ import allSmallCases from "../components/allSmallcases.js";
 import getData from "./getData.js";
 import managers from "../components/managers.js";
 import navbar from "../components/navbar.js";
+import { smallFooter, upperPart } from "../components/footerS.js";
 
 import {
   totalfilters,
@@ -143,7 +144,7 @@ function appendManagers(data, div) {
     mnListItemDiv.className = "managers-list-item";
 
     mnListItemDiv.addEventListener("click", () => {
-      window.location.href = `manager.html?id=${mn.id}`;
+      window.location.href = `manager.html`;
     });
 
     let mnDetailsDiv = document.createElement("div");
@@ -212,9 +213,73 @@ function handleFilters(div) {
       e.className = "sub-type-active";
     });
   });
+
+  let amountBtns = document
+    .querySelector(".filter-investment-amount")
+    .querySelector("form");
+
+  amountBtns.addEventListener("change", (e) => {
+    console.log(e.target.value);
+
+    let res = getData("http://localhost:5000/api/smallcases");
+    res.then((data) => {
+      if (e.target.value == "five-thousnad") {
+        data = data.filter((e) => {
+          return e.minInvestment < 5000;
+        });
+      } else if (e.target.value == "twentyfive-thousnad") {
+        data = data.filter((e) => {
+          return e.minInvestment < 25000;
+        });
+      } else if (e.target.value == "fifty-thousnad") {
+        data = data.filter((e) => {
+          return e.minInvestment < 50000;
+        });
+      }
+
+      appendAllSmallcases(data, div);
+    });
+  });
+
+  let volBtns = document
+    .querySelector(".volatility-buttons")
+    .querySelectorAll("div");
+
+  volBtns.forEach((e) => {
+    e.addEventListener("click", () => {
+      volBtns.forEach((el) => {
+        el.className = null;
+      });
+
+      e.className = "vol-active";
+      console.log(e.textContent);
+
+      let res = getData("http://localhost:5000/api/smallcases");
+      res.then((data) => {
+        if (e.textContent == "Low") {
+          data = data.filter((e) => {
+            return e.volatility == "Low";
+          });
+        } else if (e.textContent == "Med") {
+          data = data.filter((e) => {
+            return e.volatility == "Med";
+          });
+        } else if (e.textContent == "High") {
+          data = data.filter((e) => {
+            return e.volatility == "High";
+          });
+        }
+
+        appendAllSmallcases(data, div);
+      });
+    });
+  });
 }
 
 mainDiv.innerHTML = mainDiv.innerHTML = collections();
 
 const navbarDiv = document.getElementById("section-navbar");
 navbarDiv.innerHTML = navbar();
+
+const footerDiv = document.querySelector("footer");
+footerDiv.innerHTML = smallFooter();

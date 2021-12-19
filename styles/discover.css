@@ -78,10 +78,14 @@ h1 {
     -webkit-transform 0.15s ease;
 }
 
+.vol-active {
+  border-color: #248aff !important;
+}
+
 /* ********* DISCOVER SECTION ********** */
 
 .section-discover {
-  margin-top: 88px;
+  margin-top: 32px;
 }
 
 .discover-nav {
