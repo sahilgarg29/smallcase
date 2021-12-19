@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div id="images"></div>
+</body>
+</html>
+<script>
+    
+     
+ 
+    
+ 
+ 
+var slideTime = 3000;
+
+var i = 0;
+ 
+ 
+
+images[0] = 'https://www.smallcase.com/static/pngs/brand-value/couple.png';
+images[1] = 'https://www.smallcase.com/static/pngs/awi_landing/back.png';
+images[2] =  "https://www.smallcase.com/static/pngs/brand-value/back.png";
+
+function changePicture() {
+    document.body.style.backgroundImage = "url(" + images[i] + ")";
+
+    if (i < images.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+    setTimeout(changePicture, slideTime);
+}
+
+window.onload = changePicture;
+</script>

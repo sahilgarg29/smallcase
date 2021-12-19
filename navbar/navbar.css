@@ -1,0 +1,40 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 4%;
+    border: 1px solid gray;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0
+    }
+    #option1{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 56px;
+    background: #fff;
+    border-bottom: 1px solid transparent;
+    }
+    #option2{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 56px;
+    background: #fff;
+    border-bottom: 1px solid transparent;
+    }
+    #btn{
+    height: 40px;
+    width: 80px;
+    background-color: white;
+    color: rgb(31,122,224);
+    margin-top: 10px;
+    border: 1px solid rgb(116, 174, 240);
+    }
+    a{
+    text-decoration: none;
+    color: gray; 
+    }

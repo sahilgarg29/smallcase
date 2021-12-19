@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        #container{
+            height: 1000px;
+            width: 100%;
+            
+        }
+        #a{
+            display: flex;
+            height: 100px;
+            width: 90%;
+            margin: auto;
+            background-color: rgb(239, 242, 245);
+             
+            margin-top: 100px;
+        }
+        .a2{
+            height: 99%;
+            width: 30%;
+            
+        }
+        #a21{
+            font-size: 26px;
+            padding-top: 20px;
+        }
+        .a1{
+            height: 99%;
+            width: 17.5%;
+            
+        }
+        .a11{
+            height: 45%;
+            width: 99%;
+            padding-top: 20px;
+            
+            
+        }
+         
+        hr{
+            width: 20px;
+            text-align: left;
+        }
+        #b{
+            display: flex;
+            height: 60px;
+            width: 100%;
+             
+        }
+        .b1{
+            height: 99%;
+            width: 20%;
+            padding-top: 40px;
+            margin-left: 70px;
+        }
+        .b2{
+            height: 99%;
+            width: 39%;
+            padding-top: 40px;
+            margin-left: 500px;
+        }
+        #side{
+             display: inline-block;
+            height: 900px;
+            width: 99.5%;
+            border: 1px solid rgb(66, 224, 45);
+        }
+        #leftside{
+            height: auto;
+            width: 850px;
+            
+            display: inline-block;
+            vertical-align: top;
+        }
+        #rightside{
+            height: 560px;
+            width: 465px;
+            
+            display: inline-block;
+        }
+         
+        #c{
+            height: 260px;
+            width: 750px;
+            margin-left: 70px;
+            background-color: rgb(249,250,251);
+            border: 1px solid gray;
+            background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzE1IiBoZWlnaHQ9IjE1OSIgdmlld0JveD0iMCAwIDMxNSAxNTkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTg0IDExMS4xNThMMTgwLjQ4OSAxMTMuMzZMMTgwLjMzOCAxMTcuNUwxNzguMTQgMTEzLjk5TDE3NCAxMTMuODQyTDE3Ny41MTEgMTExLjY0MUwxNzcuNjYzIDEwNy41TDE3OS44NjEgMTExLjAxTDE4NCAxMTEuMTU4WiIgZmlsbD0iIzhGQkNFRiIvPgo8cGF0aCBvcGFjaXR5PSIwLjA3OCIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMDQgLTI4LjVDMjQ4LjE4MyAtMjguNSAyODQgNy4zMTY4NCAyODQgNTEuNUMyODQgOTUuNjgzMiAyNDguMTgzIDEzMS41IDIwNCAxMzEuNUMxNTkuODE3IDEzMS41IDEyNCA5NS42ODMyIDEyNCA1MS41QzEyNCA3LjMxNjg0IDE1OS44MTcgLTI4LjUgMjA0IC0yOC41WiIgc3Ryb2tlPSIjMUY3QUUwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggb3BhY2l0eT0iMC4wNTkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjA4IC02NS41QzI3NC4yNzQgLTY1LjUgMzI4IC0xMS43NzM4IDMyOCA1NC41QzMyOCAxMjAuNzc0IDI3NC4yNzQgMTc0LjUgMjA4IDE3NC41QzE0MS43MjYgMTc0LjUgODggMTIwLjc3NCA4OCA1NC41Qzg4IC0xMS43NzM4IDE0MS43MjYgLTY1LjUgMjA4IC02NS41WiIgc3Ryb2tlPSIjMUY3QUUwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggb3BhY2l0eT0iMC4wMzkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjA2LjUgLTExMC41QzI5Ny4zNTEgLTExMC41IDM3MSAtMzYuODUwNSAzNzEgNTRDMzcxIDE0NC44NTEgMjk3LjM1MSAyMTguNSAyMDYuNSAyMTguNUMxMTUuNjQ5IDIxOC41IDQyIDE0NC44NTEgNDIgNTRDNDIgLTM2Ljg1MDUgMTE1LjY0OSAtMTEwLjUgMjA2LjUgLTExMC41WiIgc3Ryb2tlPSIjMUY3QUUwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggb3BhY2l0eT0iMC4wMzEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjA2LjUgLTE1MS41QzMxOS45OTUgLTE1MS41IDQxMiAtNTkuNDk0NyA0MTIgNTRDNDEyIDE2Ny40OTUgMzE5Ljk5NSAyNTkuNSAyMDYuNSAyNTkuNUM5My4wMDUzIDI1OS41IDEgMTY3LjQ5NSAxIDU0QzEgLTU5LjQ5NDcgOTMuMDA1MyAtMTUxLjUgMjA2LjUgLTE1MS41WiIgc3Ryb2tlPSIjMUY3QUUwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTIwNy4yMjkgMzQuNjc5N0MyMDIuMjcxIDM0LjY3OTcgMTk4LjA1NyA0NC41NTU0IDE5OC4wNTcgNTYuNzEwMkMxOTguMDU3IDY4Ljg2NDkgMjAyLjAyMyA3OC43NDA2IDIwNy4yMjkgNzguNzQwNkMyMTkuMTI3IDc4Ljc0MDYgMjI4Ljc5NSA2OC44NjQ5IDIyOC43OTUgNTYuNzEwMkMyMjguNzk1IDQ0LjU1NTQgMjE5LjEyNyAzNC42Nzk3IDIwNy4yMjkgMzQuNjc5N1oiIGZpbGw9IiMxRjdBRTAiLz4KPHBhdGggZD0iTTIwOS4yIDUwLjc5OTZDMjAzLjQxIDUwLjc5OTYgMjA0LjI2OCA0Ny43NjI1IDIwNC42OTcgNDUuNDI2M0MyMDUuNzY5IDQxLjIyMTEgMjA3LjI3IDQwLjA1MyAyMDkuMiA0MC4wNTNDMjE0LjU2MiA0MC4wNTMgMjE4Ljg1IDQyLjM4OTIgMjE4Ljg1IDQ1LjQyNjNDMjE4Ljg1IDQ4LjIyOTcgMjE0LjU2MiA1MC43OTk2IDIwOS4yIDUwLjc5OTZaIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXIpIi8+CjxwYXRoIGQ9Ik0yMDYuMTM1IDI3LjY5NDVWMzUuNDQ4NUMxOTYuNDg4IDM2LjUxOCAxOTYuNDg4IDc0Ljc1MzEgMjA2LjEzNSA3NS44MjI2VjgzLjU3NjVDMjAzLjU3MSA4My4zMDkyIDIwMS40OTUgODEuMzAzOCAxOTkuOTA3IDc4LjA5NTNDMTk3LjIyMSA3My4wMTUxIDE5NS4zODkgNjQuODYwMSAxOTUuMzg5IDU1LjYzNTVDMTk1LjM4OSA0Ni40MTEgMTk3LjIyMSAzOC4yNTU5IDE5OS45MDcgMzMuMTc1N0MyMDEuNDk1IDI5Ljk2NzIgMjAzLjU3MSAyNy44MjgyIDIwNi4xMzUgMjcuNjk0NVoiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcikiLz4KPHBhdGggZD0iTTI0OS4xMjIgNTQuNTYwOUMyNDkuMTIyIDc4LjcyMzMgMjI5LjkzOSA5OC4zMzc0IDIwNi4xMzUgOTguNjIxN1Y5MS43OTk0QzIyNi4yOTggOTEuNTE1MSAyNDIuNTQxIDc0Ljg4NTcgMjQyLjU0MSA1NC41NjA5QzI0Mi41NDEgMzQuMDkzOSAyMjYuMjk4IDE3LjQ2NDUgMjA2LjI3NiAxNy4zMjIzVjEwLjVDMjI5LjkzOSAxMC43ODQzIDI0OS4xMjIgMzAuMzk4NSAyNDkuMTIyIDU0LjU2MDlaIiBmaWxsPSJ1cmwoI3BhaW50Ml9saW5lYXIpIi8+CjxwYXRoIGQ9Ik0yMDYuMDg2IDk4LjYyMTdDMTgxLjEyIDk4LjMzNzQgMTYxIDc4LjcyMzMgMTYxIDU0LjU2MDlDMTYxIDMwLjM5ODUgMTgxLjEyIDEwLjc4NDMgMjA2LjA4NiAxMC41VjE3LjMyMjNDMjA0Ljc2NCAxNy40NjQ1IDIwMy40NDIgMTcuNzQ4NyAyMDIuMjY3IDE4LjQ1OTRDMTk0LjYzMSAyMi41ODEyIDE4OS4wNSAzNy4yMjA4IDE4OS4wNSA1NC41NjA5QzE4OS4wNSA3MS45MDA5IDE5NC42MzEgODYuNjgyNiAyMDIuMjY3IDkwLjY2MjNDMjAzLjQ0MiA5MS4zNzMgMjA0Ljc2NCA5MS42NTczIDIwNi4wODYgOTEuNzk5NFY5OC42MjE3WiIgZmlsbD0idXJsKCNwYWludDNfbGluZWFyKSIvPgo8cGF0aCBkPSJNMjIzLjU0OCA3Ny4xNDQxQzIxOC44MjQgODEuMDMwNCAyMTIuNzUgODMuNDQyNSAyMDYuMTM1IDgzLjU3NjVWNzUuOTM4QzIxNy4yMDQgNzUuNjcgMjI2LjExMyA2Ni42OTEzIDIyNi4xMTMgNTUuNzAyNUMyMjYuMTEzIDQ0LjcxMzcgMjE3LjIwNCAzNS42MDExIDIwNi4xMzUgMzUuNDY3MVYyNy42OTQ1QzIwOC44MzUgMjcuNjk0NSAyMTEuNTM1IDI4LjA5NjUgMjE0LjA5OSAyOC45MDA2QzIxNC41MDQgMjkuMDM0NiAyMTQuOTA5IDI5LjE2ODYgMjE1LjE3OSAyOS4zMDI2QzIxNS43MTkgMjkuNDM2NiAyMTYuMTI0IDI5LjU3MDYgMjE2LjY2NCAyOS44Mzg2QzIxNi43OTkgMjkuOTcyNyAyMTYuOTM0IDI5Ljk3MjcgMjE3LjIwNCAzMC4xMDY3QzIxNy44NzkgMzAuMzc0NyAyMTguNTU0IDMwLjY0MjcgMjE5LjIyOSAzMS4wNDQ3QzIxOS4yMjkgMzEuMDQ0NyAyMTkuMzY0IDMxLjA0NDcgMjE5LjM2NCAzMS4xNzg3QzIyMC4xNzQgMzEuNTgwOCAyMjAuOTgzIDMyLjExNjggMjIxLjY1OCAzMi42NTI4QzIyNC4zNTggMzQuNTI5IDIyNi42NTMgMzYuNjczMSAyMjguNTQyIDM5LjM1MzNDMjI4LjgxMiAzOS42MjE0IDIyOC45NDcgNDAuMDIzNCAyMjkuMjE3IDQwLjI5MTRDMjI5Ljg5MiA0MS4zNjM1IDIzMC41NjcgNDIuNTY5NiAyMzEuMjQyIDQzLjc3NTdDMjMxLjc4MiA0NC45ODE3IDIzMi4zMjIgNDYuMTg3OCAyMzIuNzI3IDQ3LjUyNzlDMjMyLjg2MiA0Ny43OTU5IDIzMi44NjIgNDguMDY0IDIzMi45OTcgNDguMzMyQzIzMy42NzIgNTAuNzQ0MiAyMzQuMDc3IDUzLjI5MDMgMjM0LjA3NyA1NS44MzY1QzIzNC4wNzcgNTkuNzIyOCAyMzMuMjY3IDYzLjM0MTEgMjMxLjkxNyA2Ni42OTEzQzIzMS4yNDIgNjguNDMzNCAyMzAuMjk3IDY5LjkwNzYgMjI5LjM1MiA3MS41MTU3QzIyNy40NjIgNzMuMzkxOCAyMjUuNzA4IDc1LjQwMiAyMjMuNTQ4IDc3LjE0NDFaIiBmaWxsPSJ1cmwoI3BhaW50NF9saW5lYXIpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIyNDEuNDE2IiB5MT0iNjQuMDk4NCIgeDI9IjI0MS40MTYiIHkyPSIxOS44MjI0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAuMDEiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJ3aGl0ZSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXIiIHgxPSIxMjcuMDk4IiB5MT0iMTA1Ni4wOCIgeDI9IjUxMS44ODMiIHkyPSIxMDU2LjA4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNUZBRkYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMUY3QUUwIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQyX2xpbmVhciIgeDE9IjE3NS45MTQiIHkxPSIxNDkuNTEiIHgyPSIyNjguNTQ3IiB5Mj0iMTQ5LjUxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNBNUNGRkYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRTBFRkZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQzX2xpbmVhciIgeDE9IjEyOS4zMDMiIHkxPSIxNTUuNjk4IiB4Mj0iMjMyLjc5MiIgeTI9IjE1NS42OTgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0E1Q0ZGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFMEVGRkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDRfbGluZWFyIiB4MT0iMjA4Ljk5MSIgeTE9IjEzMS42NDYiIHgyPSIyODUuMDAxIiB5Mj0iMTMxLjY0NiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjRjVGQUZGIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzFGN0FFMCIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=");
+        }
+        #c1{
+            height: 60px;
+            width: 99%;
+            padding-top: 20px;
+        }
+        a{
+            color: blue;
+        }
+        #c2{
+            height: 100px;
+            width: 99.95%;
+            background-color: white;
+            display: flex;
+        }
+        #c21{
+            height: 100%;
+            padding-top: 20px;
+            width: 100px;
+            margin-left: 20px;
+        }
+        #c22{
+            height: 100%;
+            padding-top: 20px;
+            width: 400px;
+        }
+        #c3{
+            height: 60px;
+            width: 99.5%;
+            padding-top: 20px;
+        }
+        #d{
+            display: flex;
+            width: 750px;
+            height: 300px;
+            border: 1px solid gray;
+            margin-left: 70px;
+        }
+        #d1{
+           width: 48%;
+           height: 99.99%;
+           border: 1px solid gray;
+
+        }
+        #d2{
+           width: 48%;
+           height: 99.5%;
+            
+           
+        }
+       .r1{
+           height: 120px;
+           width: 260px;
+          border: 2px solid gray;
+           margin-left: 70px;
+           margin-top: 20px;
+           display: flex;
+       }
+       .r12{
+           width: 35%;
+           height: 99%;
+           
+              }
+        .r22{
+            width: 64%;
+            height: 99%;
+   
+            }
+            #tex1{
+                height: 60px;
+                width: 300px;
+                font-size: 20px;
+               
+                margin-top: 20px;
+            }
+            #tex2{
+                width: 300px;
+                height: 50px;
+                font-size: 15px;
+                
+            }
+            #tex3{
+                height: 40px;
+                width: 170px;
+                padding-left: 25px;
+                color: white;
+                padding-top: 20px;
+                
+                margin-top: 20px;
+                font-size: 18px;
+                background-color: blue;
+                color: white;
+                border-radius: 4px;
+            }
+            #at{
+                color: white;
+            }
+            .r22{
+                padding-top: 30px;
+                padding-left: 1px;
+                font-size: 18px;
+            }
+            a{
+                font-size: 14p;
+            }
+            #footer{
+                 width: 99.6%;
+                height: 200px;
+                 
+                margin-left: 70px;
+                margin-top: 100px;
+            }
+            #foot1{
+                height: 25%;
+                width: 99.99%;
+                
+                display: flex;
+            }
+            #f1{
+                width: 50%;
+                height: 99.6%;
+             
+            }
+            #f2{
+                height: 99.6%;
+                width: 120px;
+                 
+                margin-left: 100px;
+            }
+            #f3{
+                height: 99.6%;
+                width: 150px;
+               
+                margin-left: 40px;
+            }
+            #f4{
+                height: 99.6%;
+                width: 120px;
+                
+                margin-left: 40px;
+            }
+            #foot2{
+                display: flex;
+                height: 200px;
+                width: 99.6%;
+                
+            }
+            #fo1{
+                height: 50%;
+                width: 50%;
+                
+            }
+            #fo2{
+                height: 50%;
+                width: 50%;
+               
+                display: flex;
+            }
+            #ft1{
+                height: 49.5%;
+                width: 99.6%;
+                 
+                font-size: 25px;
+                font-weight: bold;
+            }
+            #ft2{
+                height: 49.5%;
+                width:  750px;
+               
+            }
+            #ft3{
+                height: 50%;
+                width: 14%;
+                border: 2px solid gray;
+                margin-left: 200px;
+                margin-top: 20px;
+                background-color: white;
+            }
+            #ft4{
+                height: 50%;
+                width: 17%;
+                border: 2px solid gray;
+                margin-left: 40px;
+                margin-top: 20px;
+                background-color: white;
+            }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="container">
+        <div id="a">
+            <div  class="a2">
+                  <div id="a21">Your Investments</div>
+                  <div id="a22">Invest in smallcases to see overview here</div>
+            </div>
+            <div class="a1">
+                 <div class="a11">Current Value</div>
+                 <hr>  
+            </div>
+            <div  class="a1">
+                <div class="a11">Current Investment</div>
+                <hr>
+            </div>
+            <div  class="a1">
+                <div class="a11">Current Returns</div>
+                 <hr>
+            </div>
+            <div  class="a1">
+                <div class="a11">Total Returns</div>
+               <hr>
+            </div>
+        </div>
+        <div id="b">
+            <div class="b1">Portfolio</div>
+            <div class="b1">Insight</div>
+            <div class="b1">Activity</div>
+            <div class="b2">What next for you</div>
+        </div>
+        <div id="side">
+            <div id="leftside"> 
+            <div id="c">
+                <div id="c1">Build a solid low-risk portfolio<br> <a href="">Learn what that means</a> </div>
+                <div id="c2">
+                    <div id="c21">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQ2LjU2MzMgMzYuMjU3OUM0OC4yNzg3IDM4LjY5MDggNTcuODc5MyA1MS4yNjQ0IDU0Ljk2ODQgNTQuNDE3QzUxLjIyMjMgNTguNDY4IDMzLjY0NzEgNDYuMTg4OCAyNy41MTk5IDM5LjgxOTNDMjAuMzIyOSAzMi40OTI1IDUuMjE4NTkgMTMuNjEyOSA4Ljk4MTcyIDkuOTgyMzZDMTAuOTQzNSA3Ljk4MDI2IDE2LjAxNyA4LjY5MzgxIDI0LjA4ODkgMTQuMjczNyIgc3Ryb2tlPSJ1cmwoI3BhaW50MF9kaWFtb25kKSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNNDYuNTI5NiAyNy44Mjg1QzQ4LjI0NSAyNS4zOTU2IDU3Ljg3OTIgMTIuNzM1MyA1NC45NjgzIDkuNTgyNzZDNTEuMjIyMiA1LjUzMTc3IDMzLjY0NyAxNy44MTEgMjcuNTE5OCAyNC4xODA1QzIwLjMyMjggMzEuNTA3MyA1LjIxODQ4IDUwLjM4NjggOC45ODE2MSA1NC4wMTc0QzEwLjk0MzQgNTYuMDE5NSAxNi4wMTY5IDU1LjMwNiAyNC4wODg4IDQ5LjcyNjEiIHN0cm9rZT0idXJsKCNwYWludDFfZGlhbW9uZCkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My43MDA4IDQ0LjE3MjRMNDMuNjYyNCA0NC4yMDk5TDQzLjYyNSA0NC4yNDgzTDQzLjYyMzkgNDQuMjQ3MkMzNi44MDY4IDUwLjgzMDQgMjYuMDc0NCA1MC44NzIzIDE5LjQ5NTMgNDQuMjkzMkMxMi45MDMzIDM3LjcwMTIgMTIuOTU3OCAyNi45Mzg5IDE5LjU3OTkgMjAuMTIzOUwxOS41OTgxIDIwLjEwNjFDMTkuNjAxMiAyMC4xMDMgMTkuNjA0MyAyMC4xIDE5LjYwNzQgMjAuMDk3MUMxOS42MTA1IDIwLjA5NDEgMTkuNjEzNiAyMC4wOTEyIDE5LjYxNjYgMjAuMDg4MkMyNi4zOTIyIDEzLjUwNTcgMzcuMTUzOCAxMy40NTA4IDQzLjc0NTggMjAuMDQyOEM1MC4zMjQ4IDI2LjYyMTggNTAuMjgzIDM3LjM1NDMgNDMuNjk5NyA0NC4xNzEzTDQzLjcwMDggNDQuMTcyNFpNMjAuNzYxNCAyMy4yOTMyQzIwLjg4MzggMjIuNzgzMyAyMS4xNjE2IDIyLjM0OTkgMjEuNDc4NCAyMS45NTUyQzI3LjE4NTEgMTYuMzYxNyAzNi4zMDA4IDE2LjMyMjEgNDEuODgzNiAyMS45MDQ5QzQ3LjQxNzMgMjcuNDM4NSA0Ny4zODgxIDM2LjUzMDQgNDEuODI1MSA0Mi4zMTY3QzQxLjQzMjcgNDIuNjMwNyA0MS4wMDE3IDQyLjkwNTYgNDAuNDk1MyA0My4wMjcxQzM3LjM0NzQgNDMuOTk5NyAzMS44MDE4IDQxLjQ2NTIgMjcuMDYyNiAzNi43MjU5QzIyLjMyMzMgMzEuOTg2NyAxOS44Mjc3IDI2LjQ4IDIwLjc2MTQgMjMuMjkzMlpNMzkuNjU2NSAzOC4wNzY1QzQxLjAzMjYgMzYuNjMzMiA0MS43MjU0IDM0LjczNjcgNDEuNzYyNyAzMi43NjAyQzQxLjc4ODQgMzEuODY1MSA0MS4yMjk0IDI4Ljk0NjUgNDAuOTM4NSAyOC4zNjhDNDAuMzkwMyAyNy4yNDQzIDM5LjY2MDEgMjYuMTY4OCAzOC42OTA0IDI1LjE5OTFDMzguMDU1MSAyNC41NjM4IDM3LjMzMzQgMjQuMDE0OCAzNi41ODc3IDIzLjU1NjdDMzYuNTM5OSAyMy41Mzc3IDM2LjQ5OTIgMjMuNTExNCAzNi40NTg2IDIzLjQ4NTJDMzYuNDE4IDIzLjQ1ODkgMzYuMzc3MyAyMy40MzI3IDM2LjMyOTUgMjMuNDEzN0MzNS45MDg4IDIzLjE2NTYgMzUuNDkyOCAyMi45Nzk3IDM1LjA3NjcgMjIuNzkzOUMzNC42MzE5IDIyLjYzNjggMzQuMTg3MSAyMi40Nzk3IDMzLjc3NTcgMjIuMzU2MUMzMy43MTM1IDIyLjM1MTQgMzMuNjUwMSAyMi4zMzEyIDMzLjU4NjcgMjIuMzExQzMzLjUyMzQgMjIuMjkwOCAzMy40NiAyMi4yNzA2IDMzLjM5NzggMjIuMjY1OUMzMi4zMjYyIDIyIDMxLjMwMiAyMS45NTQxIDMwLjI1ODQgMjIuMDYxNUMyOS45ODA4IDIyLjA3MTYgMjkuNjc0NCAyMi4xMTA1IDI5LjQwMTQgMjIuMTgyOEMyOS4zNjggMjIuMTQ5NCAyOS4zMzkyIDIyLjE3ODEgMjkuMzM5MiAyMi4xNzgxQzI5LjA5NSAyMi4yMjE3IDI4Ljg4NDMgMjIuMjk4NyAyOC42NzM1IDIyLjM3NTdDMjguNjM4OCAyMi4zODQ5IDI4LjYxMzEgMjIuMzk0OCAyOC41OTExIDIyLjQwMzJDMjguNTU1NyAyMi40MTY5IDI4LjUzIDIyLjQyNjggMjguNDkxNSAyMi40MjM5QzI4LjMwOTYgMjIuNDcyMSAyOC4xODk4IDIyLjUyNSAyOC4wNDEzIDIyLjYwNjdDMjcuOTUwMyAyMi42MzA4IDI3LjgzMDUgMjIuNjgzNyAyNy43MTA4IDIyLjczNjVDMjYuOTYzNCAyMy4wODI2IDI2LjI4NzYgMjMuNTU3OCAyNS43MTIyIDI0LjEzMzNMMjUuNzEyNyAyNC4xMzM4QzI1LjAzNTkgMjQuODc3OSAyNC45OTQ0IDI1Ljk4NjYgMjUuMzU1IDI3LjIyNjlDMjUuODc4MSAyOS4yMzkgMjcuNDA1MyAzMS43ODE1IDI5LjcwNyAzNC4wODMyQzMyLjAwODggMzYuMzg0OSAzNC41NTEyIDM3LjkxMjIgMzYuNTYzNCAzOC40MzUzQzM3LjgwMzkgMzguNzk1OSAzOC44Nzk2IDM4LjcyMSAzOS42NTcgMzguMDc3TDM5LjY1NjUgMzguMDc2NVpNMzAuODgwOCAyOC44MDczQzI5Ljc0NDIgMjkuOTQ0IDI5LjIxOTcgMjkuMjA0IDI4Ljc4NjIgMjguNTkyNUMyOC43NjUgMjguNTYyNyAyOC43NDQxIDI4LjUzMzEgMjguNzIzMyAyOC41MDQyQzI3Ljk4MTIgMjcuMzIwNSAyOC4wMjI4IDI2Ljc0NCAyOC40MjAyIDI2LjM0NjdDMjkuNTIzOSAyNS4yNDI5IDMwLjk0MTkgMjQuODk0OCAzMS42MzczIDI1LjU5MDNDMzIuMjc5MiAyNi4yMzIyIDMxLjk4NDYgMjcuNzAzNiAzMC44ODA4IDI4LjgwNzNaIiBmaWxsPSIjQUZCMUIzIi8+CjxkZWZzPgo8cmFkaWFsR3JhZGllbnQgaWQ9InBhaW50MF9kaWFtb25kIiBjeD0iMCIgY3k9IjAiIHI9IjEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0idHJhbnNsYXRlKDI1LjkyOTggMTYuMTYxOCkgcm90YXRlKDE0LjU4MzQpIHNjYWxlKDIyLjQyMzEgMzguOTY2OSkiPgo8c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNBRUIxQjIiLz4KPC9yYWRpYWxHcmFkaWVudD4KPHJhZGlhbEdyYWRpZW50IGlkPSJwYWludDFfZGlhbW9uZCIgY3g9IjAiIGN5PSIwIiByPSIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgyNC4zOTI2IDUyLjIwOTEpIHJvdGF0ZSgtMTIyLjM3OCkgc2NhbGUoMTYuMzUxOCA3MS4zNDM3KSI+CjxzdG9wIHN0b3AtY29sb3I9IndoaXRlIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0FFQjFCMiIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=" alt="">
+                    </div>
+                    <div id="c22">A core portfolio helps protect your investments<br> against market volatility<br><a href="">Find a Core</a></div>
+                </div>
+                <div id="c3">Your satellite investments<br><a href="">Learn what that means</a></div>
+               </div>
+               
+               <div id="d">
+                   <div id="d1">
+                    <img src="" alt="">
+                   </div>
+                   <div id="d2"> 
+                       <div id="tex1"><b>It's a beautiful day to start your<br> investment journey</b></div>
+                       <div id="tex2">Pick up your first smallcase today and start<br> tracking it here</div>
+                    <div id="tex3"><a id="at" href="">Find your smallcase</a></div>
+                </div>
+               </div>
+               </div>
+        <div id="rightside">
+            <div class="r1">
+                <div class="r12">
+                    <img src="" alt="">
+                </div>
+                <div class="r22">Learn how to build a healthy portfolio<br><a href="">See What That Means</a> </div>
+            </div>
+            <div class="r1">
+                <div class="r12">
+                    <img src="" alt="">
+                </div>
+                <div class="r22">Find Your Next Idea in a minutes<br><a href="">Find Your smallcase</a> </div>
+            </div>
+            <div class="r1">
+                <div class="r12">
+                    <img src="" alt="">
+                </div>
+                <div class="r22">Always stay in touch with us<br><a href="">Update Contact Info.</a> </div>
+            </div>
+        </div>
+        
+        <div id="footer">
+            <div id="foot1">
+                <div id="f1">© Powered by smallcase Technologies Pvt. Ltd. Email us at support@smallcase.com</div>
+                <div id="f2">Help </div>
+                <div id="f3">Disclosures</div>
+                <div id="f4">More</div>
+            </div>
+            <div id="foot2">
+                <div id="fo1" >
+                    <div id="ft1">ZERODHA</div>
+                    <div id="ft2">NSE & BSE – SEBI Registration No: INZ000031633 | CDSL - SEBI  Registration No: IN-DP-431-2019</div>
+                </div>
+                <div id="fo2">
+                    <div id="ft3">Fully Secure & Compliant</div>
+                    <div id="ft4">500000+<br>Invester Trust us</div>
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+<script type="module">
+     import navbar from "./navbar.js";
+   console.log(navbar)
+   let container=document.getElementById("navbar")
+   container.innerHTML=navbar();
+  
+</script>
