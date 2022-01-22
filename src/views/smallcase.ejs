@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smallcase</title>
-    <link rel="stylesheet" href="styles/navbar.css" />
-    <link rel="stylesheet" href="components/footer.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
-  </head>
-  <link rel="stylesheet" href="styles/smallcase.css" />
+  <%- include("./head.ejs") %>
+
   <body>
-    <section id="section-navbar"></section>
+    <%- include("./header_nav.ejs", {user: user}) %>
+
     <div id="main">
       <div class="modal-container" style="display: none">
         <div>
@@ -35,9 +28,9 @@
               <span class="selected">Monthly SIP</span><span>One Time</span>
             </div>
             <div>
-              <span>₹ </span
-              ><input type="number" name="amount" id="amount" required />
+              <input type="number" name="amount" id="quantity" required />
             </div>
+            <div>Total Amount - <span class="total-amount">25000</span></div>
             <button class="btn-blue" onclick="handleInvest()">
               Confirm Amount
             </button>
@@ -72,7 +65,7 @@
         <div class="container">
           <section class="section-left">
             <section class="section-smallcase-nav">
-              <div class="container">
+              <div class="cont3ainer">
                 <nav class="smallcase-nav">
                   <ul class="left">
                     <li class="link-active"><a>Overview</a></li>
@@ -137,13 +130,12 @@
     const modalcont = document.querySelector(".modal-container");
     modalcont.setAttribute("style", "display:none");
   }
+  // function handleInvest() {
+  //   let oneOrSip = document.querySelector(".selected").textContent;
+  //   let amount = document.getElementById("amount").value;
 
-  function handleInvest() {
-    let oneOrSip = document.querySelector(".selected").textContent;
-    let amount = document.getElementById("amount").value;
-
-    console.log(oneOrSip, amount);
-    closeBox();
-  }
+  //   console.log(oneOrSip, amount);
+  //   closeBox();
+  // }
 </script>
 <script src="scripts/smallcase.js" type="module"></script>

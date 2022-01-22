@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <title>Add Funds</title>
+  </head>
+  <body>
+    <input type="number" id="fundsInput" />
+    <button onclick="addFunds()">Add Funds</button>
+  </body>
+</html>
+<script>
+  async function addFunds() {
+    var amount = document.getElementById("fundsInput").value;
+    amount = +amount;
+    var res = await fetch("http://localhost:5001/payment/order", {
+      method: "POST",
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxZTY5NWJjNWY3MDkwODUyOTYxYjMwYSIsIm5hbWUiOiJzYWhpbCBnYXJnIiwiZW1haWwiOiJnYXJnc2FoaWxyYXRpYUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQwOCR4Ry9DVU5haXJqakZ4ZHRwLm5xcGFPUkRzakZ5QTd0SzBvcWRWMXlUcXh2ZmZ2ampiUXlpUyIsImJhbGFuY2UiOjAsImNyZWF0ZWRBdCI6IjIwMjItMDEtMThUMTA6MjY6MDQuODY2WiIsInVwZGF0ZWRBdCI6IjIwMjItMDEtMThUMTA6MjY6MDQuODY2WiJ9LCJpYXQiOjE2NDI1NjYyNzUsImV4cCI6MTY0Nzc1MDI3NX0.IlTt4tYFjgD2g2oSiOlxRIK8e2bu60-6qn5T5eSDYZs",
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify({ amount: amount }),
+    });
+
+    res = await res.json();
+    console.log(res);
+
+    var options = {
+      key: "rzp_test_4GExMSyJ8jehHs", // Enter the Key ID generated from the Dashboard
+      name: "Acme Corp",
+      description: "Test Transaction",
+      image: "https://example.com/your_logo",
+      order_id: res.order_id, //This is a sample Order ID. Pass the `id` obtained in the previous step
+      handler: async function (response) {
+        var res = await fetch("http://localhost:5001/payment/verify", {
+          method: "POST",
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxZTY5NWJjNWY3MDkwODUyOTYxYjMwYSIsIm5hbWUiOiJzYWhpbCBnYXJnIiwiZW1haWwiOiJnYXJnc2FoaWxyYXRpYUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQwOCR4Ry9DVU5haXJqakZ4ZHRwLm5xcGFPUkRzakZ5QTd0SzBvcWRWMXlUcXh2ZmZ2ampiUXlpUyIsImJhbGFuY2UiOjAsImNyZWF0ZWRBdCI6IjIwMjItMDEtMThUMTA6MjY6MDQuODY2WiIsInVwZGF0ZWRBdCI6IjIwMjItMDEtMThUMTA6MjY6MDQuODY2WiJ9LCJpYXQiOjE2NDI1NjYyNzUsImV4cCI6MTY0Nzc1MDI3NX0.IlTt4tYFjgD2g2oSiOlxRIK8e2bu60-6qn5T5eSDYZs",
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: JSON.stringify(response),
+        });
+
+        res = await res.json();
+        console.log(res);
+      },
+      prefill: {
+        name: "Gaurav Kumar",
+        email: "gaurav.kumar@example.com",
+        contact: "9999999999",
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.on("payment.failed", function (response) {
+      alert(response.error.code);
+      alert(response.error.description);
+      alert(response.error.source);
+      alert(response.error.step);
+      alert(response.error.reason);
+      alert(response.error.metadata.order_id);
+      alert(response.error.metadata.payment_id);
+    });
+
+    rzp1.open();
+  }
+</script>

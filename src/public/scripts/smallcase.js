@@ -19,10 +19,11 @@ allNavli.forEach((e) => {
     });
     e.className = "link-active";
     let res = getData(
-      `http://localhost:5000/api/smallcases/${url.searchParams.get("id")}`
+      `http://localhost:5001/api/smallcases/${url.searchParams.get("id")}`
     );
 
     res.then((data) => {
+      console.log(data);
       showPage(e.firstChild.textContent, mainDiv, data);
       appendDataHeading(data);
     });
@@ -45,28 +46,28 @@ function showPage(name, div, data) {
 
 function appendDataHeading(data) {
   const scHeadImg = document.getElementById("smallcase-thumb");
-  scHeadImg.src = data.image;
+  scHeadImg.src = data.data.image_url;
 
-  document.getElementById("smallcase-heading-name").textContent = data.name;
+  document.getElementById("smallcase-heading-name").textContent =
+    data.data.name;
 
   if (data.subType == "paid") {
     document.getElementById("smallcase-free-access").innerHTML = null;
   }
 
   document.getElementById("smallcase-heading-overview").textContent =
-    data.overview;
+    data.data.tagline;
 
-  document.getElementById("smallcase-returns").textContent =
-    Object.keys(data.returns[0]) + " CAGR";
+  document.getElementById("smallcase-returns").textContent = "1Y CAGR";
 
   document.getElementById("smallcase-returns-percentage").textContent =
-    Object.values(data.returns[0]) + "%";
+    data.data.returns + "%";
 
   document.getElementById("smallcase-vol").textContent =
-    data.volatility + " Volatility";
+    data.data.volatility + " Volatility";
 
   document.getElementById("smallcase-min-inves-amount").textContent =
-    "₹ " + data.minInvestment;
+    "₹ " + data.minimum_investment;
 }
 
 async function appendETFs(data) {
@@ -172,11 +173,20 @@ mainDiv.innerHTML = smallcaseOverview();
 handleTimeframes();
 
 let res = getData(
-  `http://localhost:5000/api/smallcases/${url.searchParams.get("id")}`
+  `http://localhost:5001/api/smallcases/${url.searchParams.get("id")}`
 );
 
 res.then((data) => {
+  console.log(data);
   appendDataHeading(data);
+  function handleInvest() {
+    let oneOrSip = document.querySelector(".selected").textContent;
+    let quantity = document.getElementById("quantity").value;
+    let amount = document.querySelector(".total-amount");
+    amount.textContent = data.minimum_investment;
+    console.log(oneOrSip, amount);
+    closeBox();
+  }
   appendModalData(data);
 });
 
@@ -200,8 +210,8 @@ MorOBtn.forEach((e) => {
   });
 });
 
-const navbarDiv = document.getElementById("section-navbar");
-navbarDiv.innerHTML = navbar();
+// const navbarDiv = document.getElementById("section-navbar");
+// navbarDiv.innerHTML = navbar();
 
-const footerDiv = document.querySelector("footer");
-footerDiv.innerHTML = smallFooter();
+// const footerDiv = document.querySelector("footer");
+// footerDiv.innerHTML = smallFooter();
