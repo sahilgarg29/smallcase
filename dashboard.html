@@ -31,6 +31,7 @@
         grid-template-columns: 70% 20%;
         gap: 60px;
       }
+ 
       /* #leftTop {
         border: 1px solid red;
       } */
@@ -48,11 +49,27 @@
       }
       #rightBottom {
         border: 1px solid #9c9ea0;
-        line-height: 25px;
+        line-height:    25px;
         margin-top: 30px;
         padding: 12px;
         border-radius: 5px;
         font-size: 14px;
+      }
+      @media only screen and (min-width:321px) and (max-width:720px){
+        #main_container {
+          grid-template-columns: repeat(1,1fr);
+          grid-template-rows: repeat(4,300px);
+        }
+        #leftBottom {
+        /* border: 1px solid red; */
+        margin-top: 50%;
+        }
+        #leftBottom{
+          display: none;
+        }
+        #rightTop{
+          display: block;
+        }
       }
       .blue {
         color: blue;
