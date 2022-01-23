@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./head.ejs") %>
+  <body>
+    <%- include("./header_nav.ejs", user) %>
+    <div class="main">
+      <form class="login-form" method="post">
+        <h1>Login into your account</h1>
+        <div>
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    let res = await fetch("http://localhost:5001/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, password: password }),
+    });
+
+    if (res.status === 200) {
+      window.location.href = "/home";
+    }
+  });
+</script>

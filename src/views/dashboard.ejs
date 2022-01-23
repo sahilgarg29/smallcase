@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="./components/footer.css" />
-    <title>Document</title>
+  <%- include("./head.ejs") %>
+
     <style>
-      body {
+      #body {
         padding: 0;
         margin: 0;
         font-size: 16px;
@@ -230,22 +222,20 @@
         padding-left: 10px;
         margin-bottom: 10px;
         height: 20px;
-
       }
 
-
-      #mainnav{
+      #mainnav {
         border-bottom: 1px solid #dde0e4;
         display: flex;
         /* padding-bottom: 12px; */
       }
 
-      #mainnav a{
+      #mainnav a {
         display: block;
         padding-bottom: 16px;
       }
 
-      .navtext{
+      .navtext {
         border-bottom-color: blue;
       }
       /* mainnavbar */
@@ -258,28 +248,11 @@
   <body>
     <!-- main nav -->
 
-    <div id="mainnav">
-      <img
-      id="logo"
-      alt=""
-      src="images/logo.svg"
-    />
-    <a href="dashboard.html" class="navtext">Dashboard</a>
-    <a href="discover.html" class="navtext">Discover</a>
-    <a href="creative.html" class="navtext">Create</a>
-    <a href="watchlist.html" class="navtext" id="separation">Watchlist</a>
-    <a href="" class="navtext">Investments</a>
-    <a href="" class="navbut"><i class="fa fa-bell" style="font-size:20px;color:rgb(161, 159, 159)"></i></a>
-    <a href="" class="navbut" id="navq"><i class="fa fa-question-circle" style="font-size:24px;color:rgb(151, 148, 148)"></i></a>
-  
-    <a id="user" href="" class="navbut"
-      >sahil <i class="fa fa-angle-down" style="font-size:24px;color:rgb(133, 130, 130)"></i></i
-    ></a>
-    
-    </div>
+    <%- include('./header_nav.ejs', {user: user}) %>
     <br />
     <br />
     <!-- main nav -->
+    <div id="body">
     <div id="upperP"></div>
     <div id="main_container">
       <div id="a">
@@ -533,6 +506,7 @@
           </p>
         </div>
       </div>
+    </div>
     </div>
     <div id="smallfooter"></div>
   </body>

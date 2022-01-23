@@ -46,7 +46,7 @@ function showPage(name, div) {
 
     const smListDiv = document.querySelector(".smallcases-list");
     console.log(smListDiv.innerHTML);
-    let res = getData("http://localhost:5000/api/smallcases");
+    let res = getData("http://localhost:5001/api/smallcases");
     res.then((data) => {
       appendAllSmallcases(data, smListDiv);
       handleFilters(smListDiv);
@@ -66,36 +66,33 @@ function showPage(name, div) {
 }
 
 async function appendAllSmallcases(data, div) {
-  let managerRes = await getData(`http://localhost:5000/api/managers`);
-
+  // let managerRes = await getData(`http://localhost:5001/api/smallcases`);
+  // console.log(data);
   div.innerHTML = null;
 
   data.forEach((smlcase) => {
-    let managerName = managerRes.filter((e) => {
-      return smlcase.managerId == e.id;
-    });
-
+    console.log(smlcase);
     let listItemDiv = document.createElement("div");
     listItemDiv.className = "list-item";
 
     listItemDiv.addEventListener("click", () => {
-      window.location.href = `smallcase.html?id=${smlcase.id}`;
+      window.location.href = `/smallcases?id=${smlcase.data._id}`;
     });
 
     let itemImgDiv = document.createElement("img");
-    itemImgDiv.src = smlcase.image;
+    itemImgDiv.src = smlcase.data.image_url;
 
     let contentDiv = document.createElement("div");
     contentDiv.className = "content";
 
     let contentH2 = document.createElement("h2");
-    contentH2.textContent = smlcase.name;
+    contentH2.textContent = smlcase.data.name;
 
     let contentp1 = document.createElement("p");
-    contentp1.textContent = smlcase.overview;
+    contentp1.textContent = smlcase.data.tagline;
 
     let contentp2 = document.createElement("p");
-    contentp2.textContent = "By " + managerName[0].name;
+    contentp2.textContent = "By Windmill Capital";
 
     contentDiv.append(contentH2, contentp1, contentp2);
 
@@ -106,7 +103,7 @@ async function appendAllSmallcases(data, div) {
     minAmountP1.textContent = "Min. Amount";
 
     let minAmountP2 = document.createElement("p");
-    minAmountP2.textContent = "₹ " + smlcase.minInvestment;
+    minAmountP2.textContent = "₹ " + smlcase.minimum_investment;
 
     minAmountDiv.append(minAmountP1, minAmountP2);
 
@@ -114,16 +111,16 @@ async function appendAllSmallcases(data, div) {
     returnsDiv.className = "returns";
 
     let returnsP1 = document.createElement("p");
-    returnsP1.textContent = "3Y CAGR";
+    returnsP1.textContent = "1Y CAGR";
 
     let returnsP2 = document.createElement("p");
-    returnsP2.textContent = "25%";
+    returnsP2.textContent = smlcase.data.returns + "%";
 
     returnsDiv.append(returnsP1, returnsP2);
 
     let volatilityDiv = document.createElement("div");
     volatilityDiv.className = "volatility";
-    volatilityDiv.textContent = smlcase.volatility + " Volatility";
+    volatilityDiv.textContent = smlcase.data.volatility + " Volatility";
 
     listItemDiv.append(
       itemImgDiv,
