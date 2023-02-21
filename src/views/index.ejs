@@ -1,7 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("./head.ejs") %>
-  <body>
-    <%- include("./header_nav.ejs", {user: user}) %>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Smallcase</title>
+		<link rel="stylesheet" href="styles/home.css" />
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+	<body>
+		<%- include("./header_nav.ejs", user) %>
+
+		<!-- Hero Section-->
+		<section class="bg-hero-bg bg-cover">
+			<div class="container mx-auto px-6">
+				<div class="flex flex-col mt-8 md:items-start items-center">
+					<h1 class="text-5xl font-bold max-w-sm text-center md:text-left">
+						Invest in ideas with smallcases
+					</h1>
+					<p
+						class="max-w-[360px] mt-4 text-textGray2 text-lg text-center md:text-left"
+					>
+						Get simple, smart investment portfolios curated by experts
+					</p>
+					<div class="flex mt-4 gap-4">
+						<a
+							href="/login"
+							class="bg-primary px-6 py-3 text-white font-bold rounded-[5px] hover:shadow-sm hover:translate-y-[-1px]"
+							>Login with Broker</a
+						>
+						<a
+							href="/discover"
+							class="hover:text-lightBlack text-primary px-6 py-3 border-solid border-[1px] border-primaryBorder rounded-[5px] font-bold hover:text-primary hover:shadow-sm hover:translate-y-[-1px]"
+							>See Smallcases</a
+						>
+					</div>
+
+					<p href="#" class="text-[13px] text-textGray mt-4 mb-32">
+						Don’t have a broker account?
+						<a href="#" class="text-primary"> Open Broker Account</a>
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="mt-24">
+			<div
+				class="container mx-auto flex flex-col md:flex-row justify-between px-6 gap-16"
+			>
+				<div class="flex flex-col gap-4 md:w-1/2">
+					<h1 class="text-4xl font-bold text-center md:text-left">
+						A smallcase is a basket of stocks that reflects an idea
+					</h1>
+					<p class="text-textGray2 text-lg text-center md:text-left">
+						smallcases are portfolios of stocks or ETFs, that track a theme,
+						strategy or objective
+					</p>
+
+					<div>
+						<img
+							src="img/whatissmallcase-thumbnail.jpeg"
+							alt=""
+							class="rounded-sm"
+						/>
+					</div>
+
+					<div
+						class="flex gap-4 items-center px-2 py-4 bg-[#f9fafb] rounded-sm"
+					>
+						<div>
+							<img
+								src="img/smallcases-bp-2.webp"
+								class="h-[67px] w-[91px] rounded-sm"
+							/>
+						</div>
+						<div>
+							<p class="text-[13px] text-primary font-semibold">
+								Investing Insights
+							</p>
+							<p class="text-lg font-bold">
+								Why Investors Should Invest in smallcases
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-col gap-14 md:w-1/2 items-end">
+					<div class="flex items-center">
+						<div>
+							<img src="img/1.svg" alt="" />
+						</div>
+						<div class="-m-4 -mt-2">
+							<h3 class="text-xl font-bold mb-4">Simple to understand</h3>
+							<p class="max-w-[320px] text-textGray2">
+								smallcases are modern investing products based on simple ideas
+								you can understand.
+							</p>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div>
+							<img src="img/2.svg" alt="" />
+						</div>
+						<div class="-m-4 -mt-2">
+							<h3 class="text-xl font-bold mb-4">Managed by professionals</h3>
+							<p class="max-w-[320px] text-textGray2">
+								smallcases are created by India’s leading finance experts &
+								backed by solid research.
+							</p>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div>
+							<img src="img/3.svg" alt="" />
+						</div>
+						<div class="-m-4 -mt-2">
+							<h3 class="text-xl font-bold mb-4">Designed for you</h3>
+							<p class="max-w-[320px] text-textGray2">
+								smallcases are fully customizable. Edit your smallcase
+								constituents any time or create your own smallcase.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Partners Section -->
+		<section class="mt-32">
+			<div
+				class="container mx-auto flex justify-between items-center gap-4 px-6 flex-col md:flex-row"
+			>
+				<div class="flex flex-col gap-4 md:w-1/2">
+					<h1 class="text-4xl font-bold text-center md:text-left">
+						Curated by India's top investment managers
+					</h1>
+					<p class="text-textGray2 text-lg text-center md:text-left">
+						smallcases are created & managed by leading professionals who are
+						SEBI registered research analysts and investment advisors
+					</p>
+					<div class="flex gap-4 justify-center md:justify-start">
+						<a
+							href="#"
+							class="bg-primary px-4 py-2 text-white font-semibold rounded-[5px] text-sm hover:shadow-sm hover:translate-y-[-1px]"
+							>View all Managers</a
+						>
+						<a
+							href="#"
+							class="hover:text-lightBlack text-primary px-4 py-2 border-solid border-[1px] border-primaryBorder rounded-[5px] font-semibold text-sm hover:text-primary hover:shadow-sm hover:translate-y-[-1px]"
+							>View case by case</a
+						>
+					</div>
+				</div>
+				<div class="md:w-1/2">
+					<video loop autoplay playsinline src="img/creator-scroll.mp4">
+						Sorry
+					</video>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer
+			class="bg-[#f9fafb] border-solid border-t-[1px] border-grayBorder py-8 mt-32"
+		>
+			<div class="container mx-auto px-6">
+				<div class="flex justify-between flex-col md:flex-row gap-4">
+					<div class="flex flex-col gap-4">
+						<div>
+							<img src="img/smallcase-logo-with-text.svg" alt="" />
+						</div>
+						<p class="text-textGray text-[13px] max-w-md">
+							smallcase Technologies builds platforms & investment products to
+							invest better in Indian equities. A smallcase is a basket of
+							stocks/ETFs curated to reflect an idea
+						</p>
+						<p class="text-textGray text-[13px] max-w-md">
+							Investing in Stocks/ETFs (Exchange Traded Funds) are subject to
+							market risks. Read all the related documents before investing.
+							Investors should consider all risk factors and consult their
+							financial advisor before investing
+						</p>
+					</div>
+					<div class="flex md:flex-col gap-2 justify-between">
+						<a href="#" class="text-textGray2 font-bold text-[13px]">Company</a>
+						<a href="#" class="text-textGray2 text-[13px]">About</a>
+						<a href="#" class="text-textGray2 text-[13px]">For Businesses</a>
+						<a href="#" class="text-textGray2 text-[13px]">Blog</a>
+						<a href="#" class="text-textGray2 text-[13px]">Press</a>
+						<a href="#" class="text-textGray2 text-[13px]">Careers</a>
+					</div>
+					<div class="flex md:flex-col gap-1 justify-between">
+						<a href="#" class="text-textGray2 font-bold text-[13px]"
+							>Products</a
+						>
+						<a href="#" class="text-textGray2 text-[13px]">Publisher</a>
+						<a href="#" class="text-textGray2 text-[13px]">FShare</a>
+						<a href="#" class="text-textGray2 text-[13px]">Gateway</a>
+						<a href="#" class="text-textGray2 text-[13px]">Brokers</a>
+						<a href="#" class="text-textGray2 text-[13px]">Tickertape</a>
+					</div>
+					<div class="flex md:flex-col gap-2 justify-between">
+						<a href="#" class="text-textGray2 font-bold text-[13px]"
+							>Fine Print</a
+						>
+						<a href="#" class="text-textGray2 text-[13px]">Privacy</a>
+						<a href="#" class="text-textGray2 text-[13px]">Disclousers</a>
+						<a href="#" class="text-textGray2 text-[13px]"
+							>User Created smallcases</a
+						>
+						<a href="#" class="text-textGray2 text-[13px]">Investment Tolls</a>
+						<a href="#" class="text-textGray2 text-[13px]"
+							>Return Calculation Methodology</a
+						>
+					</div>
+				</div>
+				<div
+					class="flex flex-col md:flex-row justify-between pt-4 border-solid border-t-[1px] mt-6 gap-4"
+				>
+					<p class="text-textGray text-[13px] md:max-w-[300px]">
+						smallcase Technologies Private Limited #51, 3rd Floor, Le Parc
+						Richmonde, Richmond Road, Shanthala Nagar, Richmond Town, Bangalore
+						- 560025
+					</p>
+					<p class="text-textGray text-[13px]">
+						Contact us on help@smallcase.com
+					</p>
+					<p class="text-textGray text-[13px]">Help & Support</p>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>

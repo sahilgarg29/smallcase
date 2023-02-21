@@ -1,141 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("./head.ejs") %>
+	<%- include("./head.ejs") %>
 
-  <body>
-    <%- include("./header_nav.ejs", {user: user}) %>
+	<body>
+		<%- include("./header_nav.ejs", {user: user}) %>
 
-    <div id="main">
-      <div class="modal-container" style="display: none">
-        <div>
-          <h2>
-            Investing in
-            <span id="modal-smallcase-name"> All Weather Investing </span>
-          </h2>
+		<div id="main">
+			<div class="modal-container" style="display: none">
+				<div>
+					<h2>
+						Investing in
+						<span id="modal-smallcase-name"> All Weather Investing </span>
+					</h2>
 
-          <button onclick="closeBox()">X</button>
-        </div>
-        <div>
-          <div>
-            <h2>Confirm Investment Amount</h2>
-            <p>
-              Min. Investment Amount:
-              <span id="modal-min-amount"> ₹ 3,392.33 </span>
-            </p>
-          </div>
-          <div>
-            <div id="monthly-or-one">
-              <span class="selected">Monthly SIP</span><span>One Time</span>
-            </div>
-            <div>
-              <input type="number" name="amount" id="quantity" required />
-            </div>
-            <div>Total Amount - <span class="total-amount">25000</span></div>
-            <button class="btn-blue" onclick="handleInvest()">
-              Confirm Amount
-            </button>
-          </div>
-        </div>
-      </div>
-      <section class="section-header">
-        <div class="container">
-          <img
-            src="https://assets.smallcase.com/images/smallcases/160/SCAW_0001.png"
-            alt=""
-            id="smallcase-thumb"
-          />
-          <div class="header-overview">
-            <div>
-              <h1 id="smallcase-heading-name">All Weather Investing</h1>
-              <span id="smallcase-free-access">Free Access</span>
-            </div>
-            <p id="smallcase-heading-overview">
-              One investment for all market conditions. Works for everyone
-            </p>
-          </div>
-          <div class="returns">
-            <p id="smallcase-returns">3Y CAGR</p>
-            <p id="smallcase-returns-percentage">12.91%</p>
-          </div>
-          <div class="volatility" id="smallcase-vol">Low Volatility</div>
-        </div>
-      </section>
+					<button onclick="closeBox()">X</button>
+				</div>
+				<div>
+					<div>
+						<h2>Confirm Investment Amount</h2>
+						<p>
+							Min. Investment Amount:
+							<span id="modal-min-amount"> ₹ 3,392.33 </span>
+						</p>
+					</div>
+					<div>
+						<div id="monthly-or-one">
+							<span class="selected">Monthly SIP</span><span>One Time</span>
+						</div>
+						<div>
+							<input type="number" name="amount" id="quantity" required />
+						</div>
+						<div>Total Amount - <span class="total-amount">25000</span></div>
+						<button class="btn-blue" onclick="handleInvest()">
+							Confirm Amount
+						</button>
+					</div>
+				</div>
+			</div>
+			<section class="section-header">
+				<div class="container">
+					<img
+						src="https://assets.smallcase.com/images/smallcases/160/SCAW_0001.png"
+						alt=""
+						id="smallcase-thumb"
+					/>
+					<div class="header-overview">
+						<div>
+							<h1 id="smallcase-heading-name">All Weather Investing</h1>
+							<span id="smallcase-free-access">Free Access</span>
+						</div>
+						<p id="smallcase-heading-overview">
+							One investment for all market conditions. Works for everyone
+						</p>
+					</div>
+					<div class="returns">
+						<p id="smallcase-returns">3Y CAGR</p>
+						<p id="smallcase-returns-percentage">12.91%</p>
+					</div>
+					<div class="volatility" id="smallcase-vol">Low Volatility</div>
+				</div>
+			</section>
 
-      <section class="section-main">
-        <div class="container">
-          <section class="section-left">
-            <section class="section-smallcase-nav">
-              <div class="cont3ainer">
-                <nav class="smallcase-nav">
-                  <ul class="left">
-                    <li class="link-active"><a>Overview</a></li>
-                    <li><a>ETFs & Weights</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </section>
-            <div class="section-main-content"></div>
-          </section>
-          <section class="section-sidebar">
-            <div class="section-invest">
-              <div>
-                <p>Minimum Investment Amount</p>
-                <h2 id="smallcase-min-inves-amount">₹ 3,441</h2>
-              </div>
-              <div>
-                <p>Get access for free forever</p>
-                <a href="#">See more benefits</a>
-              </div>
-              <div>
-                <button class="btn-green" id="button-invest-now">
-                  Invest Now
-                </button>
-                <button class="btn-outline">Add to Watchlist</button>
-              </div>
-            </div>
-            <div class="section-callme">
-              <h3>Need help with investing?</h3>
-              <p>Just enter your details below & we'll reach out to you</p>
-              <div class="callme-mobileno">
-                <label for="mobile-no">Your mobile number</label>
-                <input
-                  type="number"
-                  name="mobile-no"
-                  id="mobile-no"
-                  placeholder="Eg: 9876543210"
-                />
-              </div>
-              <div class="callme-timeslots">
-                <label for="preferred-time">Preferred time</label>
-                <div>
-                  <span>10 - 12</span>
-                  <span>12 - 2</span>
-                  <span>2 - 4</span>
-                  <span>4 - 6</span>
-                </div>
-              </div>
-              <a href="#" class="btn-blue" id="callme-btn"
-                >Call Between 10AM - 12PM</a
-              >
-            </div>
-          </section>
-        </div>
-      </section>
-      <footer></footer>
-    </div>
-  </body>
+			<section class="section-main">
+				<div class="container">
+					<section class="section-left">
+						<section class="section-smallcase-nav">
+							<div class="cont3ainer">
+								<nav class="smallcase-nav">
+									<ul class="left">
+										<li class="link-active"><a>Overview</a></li>
+										<li><a>ETFs & Weights</a></li>
+									</ul>
+								</nav>
+							</div>
+						</section>
+						<div class="section-main-content"></div>
+					</section>
+					<section class="section-sidebar">
+						<div class="section-invest">
+							<div>
+								<p>Minimum Investment Amount</p>
+								<h2 id="smallcase-min-inves-amount">₹ 3,441</h2>
+							</div>
+							<div>
+								<p>Get access for free forever</p>
+								<a href="#">See more benefits</a>
+							</div>
+							<div>
+								<button class="btn-green" id="button-invest-now">
+									Invest Now
+								</button>
+								<button class="btn-outline">Add to Watchlist</button>
+							</div>
+						</div>
+						<div class="section-callme">
+							<h3>Need help with investing?</h3>
+							<p>Just enter your details below & we'll reach out to you</p>
+							<div class="callme-mobileno">
+								<label for="mobile-no">Your mobile number</label>
+								<input
+									type="number"
+									name="mobile-no"
+									id="mobile-no"
+									placeholder="Eg: 9876543210"
+								/>
+							</div>
+							<div class="callme-timeslots">
+								<label for="preferred-time">Preferred time</label>
+								<div>
+									<span>10 - 12</span>
+									<span>12 - 2</span>
+									<span>2 - 4</span>
+									<span>4 - 6</span>
+								</div>
+							</div>
+							<a href="#" class="btn-blue" id="callme-btn"
+								>Call Between 10AM - 12PM</a
+							>
+						</div>
+					</section>
+				</div>
+			</section>
+			<footer></footer>
+		</div>
+	</body>
 </html>
 <script>
-  function closeBox() {
-    const modalcont = document.querySelector(".modal-container");
-    modalcont.setAttribute("style", "display:none");
-  }
-  // function handleInvest() {
-  //   let oneOrSip = document.querySelector(".selected").textContent;
-  //   let amount = document.getElementById("amount").value;
+	function closeBox() {
+		const modalcont = document.querySelector('.modal-container');
+		modalcont.setAttribute('style', 'display:none');
+	}
+	// function handleInvest() {
+	//   let oneOrSip = document.querySelector(".selected").textContent;
+	//   let amount = document.getElementById("amount").value;
 
-  //   console.log(oneOrSip, amount);
-  //   closeBox();
-  // }
+	//   console.log(oneOrSip, amount);
+	//   closeBox();
+	// }
 </script>
 <script src="scripts/smallcase.js" type="module"></script>

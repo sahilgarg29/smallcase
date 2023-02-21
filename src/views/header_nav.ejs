@@ -1,24 +1,24 @@
 <nav id="top-nav">
-  <div class="container">
-    <ul id="top-nav-left">
-      <li>
-        <a href="/" id="logo-link"><img src="images/logo.svg" alt="logo" /></a>
-      </li>
-      <li><a href="/home">Home</a></li>
-      <li><a href="/discover">Discover</a></li>
-      <li><a href="/create">create</a></li>
-    </ul>
-    <ul id="top-nav-right">
-      <li><a href="/watchlist">Watchlist</a></li>
-      <li><a href="/investments">Investments</a></li>
+	<div class="container">
+		<ul id="top-nav-left">
+			<li>
+				<a href="/" id="logo-link"><img src="images/logo.svg" alt="logo" /></a>
+			</li>
+			<li><a href="#">Home</a></li>
+			<li><a href="/discover">Discover</a></li>
+			<li><a href="#">create</a></li>
+		</ul>
+		<ul id="top-nav-right">
+			<li><a href="#">Watchlist</a></li>
+			<li><a href="#">Investments</a></li>
 
-      <% if(user !== null){ %>
-      <li><a href="#"><%= user.name %></a></li>
+			<% if(user !== null){ %>
+			<li><a href="#"><%= user.name %></a></li>
 
-      <% }else{ %>
-      <li><a href="/login">Login</a></li>
+			<% }else{ %>
+			<li><a href="/login">Login</a></li>
 
-      <% } %>
-    </ul>
-  </div>
+			<% } %>
+		</ul>
+	</div>
 </nav>
